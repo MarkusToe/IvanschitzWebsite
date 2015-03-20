@@ -1,0 +1,44 @@
+html { font: 100%/1.5 'Noto Sans', sans-serif; }
+
+body { text-rendering: optimizeLegibility; }
+
+body,
+input,
+button  {-webkit-font-smoothing: antialiased; }
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    line-height: 1.1;
+}
+
+h1 { font-size: 2em; }
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    margin-top: 2em;
+}
+h3 { font-size: 1.17em; }
+h4 { font-size: 1em; }
+h3+h4 { margin-top: 1em; }
+h5 { font-size: 0.83em; }
+h6 { font-size: 0.75em; }
+
+@media (max-width: 500px) {
+    html { font-size: 14px; }
+}
+
+@media print {
+    * { background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;}
+}
+
+p.summary,
+p.date { font-style: italic; }
+p.date { font-size: .875rem; }
