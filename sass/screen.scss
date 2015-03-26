@@ -1,0 +1,33 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "normalize";
+@import "susy";
+
+// Configuring Susy Defaults
+$susy: (
+        global-box-sizing: border-box,
+        use-custom: (rem: true
+        ),
+        columns: 12,
+        gutters: 1/4,
+        math: fluid,
+        output: float,
+        gutter-position: inside,
+        debug: (
+                image: show,
+                color: blue,
+                output: overlay,
+                toggle: top right,
+        ),
+);
+
+@include border-box-sizing;
+
+
+main {
+  @include container;
+}
