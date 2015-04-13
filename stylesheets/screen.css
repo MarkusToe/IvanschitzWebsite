@@ -541,31 +541,33 @@ header.logo {
   width: 23.07692%;
   padding: 2em;
   box-sizing: border-box;
+  text-align: center;
+  font-size: .75em;
 }
 
-/* line 212, ../sass/screen.scss */
+/* line 214, ../sass/screen.scss */
 .verein-logo p {
   font-style: italic;
   margin: 0;
 }
 
-/* line 217, ../sass/screen.scss */
+/* line 219, ../sass/screen.scss */
 .steckbrief > div {
   padding: 2.5641%;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* line 222, ../sass/screen.scss */
+/* line 224, ../sass/screen.scss */
 .steckbrief-table td {
   padding: .5em 0;
 }
 
-/* line 226, ../sass/screen.scss */
+/* line 228, ../sass/screen.scss */
 .steckbrief-table p {
   margin: 0;
 }
 
-/* line 230, ../sass/screen.scss */
+/* line 232, ../sass/screen.scss */
 .steckbrief-table tr td:first-child {
   width: 20.51282%;
   text-align: right;
@@ -575,50 +577,50 @@ header.logo {
   font-weight: bold;
 }
 
-/* line 239, ../sass/screen.scss */
+/* line 241, ../sass/screen.scss */
 .steckbrief-table tr td:last-child {
   padding-left: 2.5641%;
 }
 
-/* line 243, ../sass/screen.scss */
+/* line 245, ../sass/screen.scss */
 .statistik {
   font-size: .875em;
 }
 
-/* line 247, ../sass/screen.scss */
+/* line 249, ../sass/screen.scss */
 .statistik > div {
   background: rgba(255, 255, 255, 0.5);
   padding: 2.5641%;
 }
 
-/* line 252, ../sass/screen.scss */
+/* line 254, ../sass/screen.scss */
 .statistik-table {
   width: 100%;
   text-transform: uppercase;
 }
 
-/* line 257, ../sass/screen.scss */
+/* line 259, ../sass/screen.scss */
 .statistik-table th, .statistik-table td {
   border-right: 1px solid #adadad;
   padding: .5em 1em;
 }
 
-/* line 262, ../sass/screen.scss */
+/* line 264, ../sass/screen.scss */
 .statistik-table td:last-child {
   border: none;
 }
 
-/* line 266, ../sass/screen.scss */
+/* line 268, ../sass/screen.scss */
 .statistik-table tr:nth-child(odd) {
   background: #ffffff;
 }
 
-/* line 270, ../sass/screen.scss */
+/* line 272, ../sass/screen.scss */
 .statistik-table tr:nth-child(even) {
   background: rgba(255, 255, 255, 0.5);
 }
 
-/* line 274, ../sass/screen.scss */
+/* line 276, ../sass/screen.scss */
 .gallery-list {
   margin: 0;
   padding: 2em 0;
@@ -630,7 +632,7 @@ header.logo {
   list-style-type: none;
 }
 
-/* line 284, ../sass/screen.scss */
+/* line 286, ../sass/screen.scss */
 .gallery-item {
   width: 31.03448%;
   height: 31.03448%;
@@ -640,18 +642,18 @@ header.logo {
   margin-bottom: 3.44828%;
   padding: 1em;
 }
-/* line 291, ../sass/screen.scss */
+/* line 293, ../sass/screen.scss */
 .gallery-item:nth-child(3n) {
   margin-right: 0;
 }
 
-/* line 297, ../sass/screen.scss */
+/* line 299, ../sass/screen.scss */
 .gallery-item img {
   max-width: 100%;
   max-height: 100%;
 }
 
-/* line 302, ../sass/screen.scss */
+/* line 304, ../sass/screen.scss */
 .contact {
   clear: both;
   width: 100%;
@@ -662,12 +664,12 @@ header.logo {
   margin-top: 1em;
 }
 
-/* line 309, ../sass/screen.scss */
+/* line 311, ../sass/screen.scss */
 .contact h2 {
   margin-left: 16.94915%;
 }
 
-/* line 313, ../sass/screen.scss */
+/* line 315, ../sass/screen.scss */
 .contact > div {
   width: 66.10169%;
   margin: 2.5641% auto;
@@ -678,20 +680,20 @@ header.logo {
   margin-top: 0;
 }
 
-/* line 322, ../sass/screen.scss */
+/* line 324, ../sass/screen.scss */
 .contact ul {
   list-style: none;
   padding: 0;
 }
 
-/* line 327, ../sass/screen.scss */
+/* line 329, ../sass/screen.scss */
 .contact-management, .contact-interview {
   width: 35.89744%;
   float: left;
   margin-right: 2.5641%;
 }
 
-/* line 331, ../sass/screen.scss */
+/* line 333, ../sass/screen.scss */
 .contact-map {
   width: 23.07692%;
   float: right;
@@ -699,7 +701,7 @@ header.logo {
 }
 
 @media (max-width: 800px) {
-  /* line 336, ../sass/screen.scss */
+  /* line 338, ../sass/screen.scss */
   html {
     background: red;
   }
