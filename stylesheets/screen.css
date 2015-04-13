@@ -501,29 +501,40 @@ main {
 }
 
 /* line 175, ../sass/screen.scss */
-header.logo {
-  display: none;
+.logo {
+  background: url("../img/logo.png") 0 0 no-repeat;
+  background-size: 100%;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 25.42373%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  pointer-events: none;
 }
 
-/* line 179, ../sass/screen.scss */
+/* line 190, ../sass/screen.scss */
 .news_entry {
   width: 48.71795%;
   float: left;
   margin-right: 2.5641%;
 }
 
-/* line 183, ../sass/screen.scss */
+/* line 194, ../sass/screen.scss */
 .news_entry:nth-child(odd) {
   margin-right: 0;
   float: right;
 }
 
-/* line 188, ../sass/screen.scss */
+/* line 199, ../sass/screen.scss */
 .news_entry time {
   text-transform: uppercase;
 }
 
-/* line 192, ../sass/screen.scss */
+/* line 203, ../sass/screen.scss */
 .news-text {
   width: 73.68421%;
   float: right;
@@ -531,35 +542,35 @@ header.logo {
   background: rgba(255, 255, 255, 0.5);
 }
 
-/* line 197, ../sass/screen.scss */
+/* line 208, ../sass/screen.scss */
 .news-text > p {
   padding: 0 1em;
 }
 
-/* line 201, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 .news-text header {
   padding: 1em;
 }
 
-/* line 205, ../sass/screen.scss */
+/* line 216, ../sass/screen.scss */
 .news-summary {
   margin: 1em 0;
   font-style: italic;
 }
 
-/* line 210, ../sass/screen.scss */
+/* line 221, ../sass/screen.scss */
 .news-text header {
   background: #ffffff;
   text-transform: uppercase;
 }
 
-/* line 215, ../sass/screen.scss */
+/* line 226, ../sass/screen.scss */
 .news-text header h3 {
   margin: 0;
   line-height: 1em;
 }
 
-/* line 220, ../sass/screen.scss */
+/* line 231, ../sass/screen.scss */
 .biography_text {
   width: 61.53846%;
   float: right;
@@ -568,18 +579,18 @@ header.logo {
   padding: 2.5641%;
 }
 
-/* line 226, ../sass/screen.scss */
+/* line 237, ../sass/screen.scss */
 .biography h3 {
   text-transform: uppercase;
   margin: 1em 0;
 }
 
-/* line 231, ../sass/screen.scss */
+/* line 242, ../sass/screen.scss */
 .verein {
   margin-bottom: 1em;
 }
 
-/* line 235, ../sass/screen.scss */
+/* line 246, ../sass/screen.scss */
 .verein-date {
   background: #ffffff;
   margin-left: 1.5em;
@@ -590,7 +601,7 @@ header.logo {
   display: inline-block;
 }
 
-/* line 245, ../sass/screen.scss */
+/* line 256, ../sass/screen.scss */
 .verein-date::before {
   content: "";
   height: 0;
@@ -602,7 +613,7 @@ header.logo {
   left: -1.5em;
 }
 
-/* line 256, ../sass/screen.scss */
+/* line 267, ../sass/screen.scss */
 .verein-date::after {
   content: "";
   height: 0;
@@ -615,7 +626,7 @@ header.logo {
   top: 0;
 }
 
-/* line 268, ../sass/screen.scss */
+/* line 279, ../sass/screen.scss */
 .verein-logo {
   background: #ffffff;
   width: 23.07692%;
@@ -625,29 +636,29 @@ header.logo {
   font-size: .75em;
 }
 
-/* line 277, ../sass/screen.scss */
+/* line 288, ../sass/screen.scss */
 .verein-logo p {
   font-style: italic;
   margin: 0;
 }
 
-/* line 282, ../sass/screen.scss */
+/* line 293, ../sass/screen.scss */
 .steckbrief > div {
   padding: 2.5641%;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* line 287, ../sass/screen.scss */
+/* line 298, ../sass/screen.scss */
 .steckbrief-table td {
   padding: .5em 0;
 }
 
-/* line 291, ../sass/screen.scss */
+/* line 302, ../sass/screen.scss */
 .steckbrief-table p {
   margin: 0;
 }
 
-/* line 295, ../sass/screen.scss */
+/* line 306, ../sass/screen.scss */
 .steckbrief-table tr td:first-child {
   width: 20.51282%;
   text-align: right;
@@ -657,50 +668,50 @@ header.logo {
   font-weight: bold;
 }
 
-/* line 304, ../sass/screen.scss */
+/* line 315, ../sass/screen.scss */
 .steckbrief-table tr td:last-child {
   padding-left: 2.5641%;
 }
 
-/* line 308, ../sass/screen.scss */
+/* line 319, ../sass/screen.scss */
 .statistik {
   font-size: .875em;
 }
 
-/* line 312, ../sass/screen.scss */
+/* line 323, ../sass/screen.scss */
 .statistik > div {
   background: rgba(255, 255, 255, 0.5);
   padding: 2.5641%;
 }
 
-/* line 317, ../sass/screen.scss */
+/* line 328, ../sass/screen.scss */
 .statistik-table {
   width: 100%;
   text-transform: uppercase;
 }
 
-/* line 322, ../sass/screen.scss */
+/* line 333, ../sass/screen.scss */
 .statistik-table th, .statistik-table td {
   border-right: 1px solid #adadad;
   padding: .5em 1em;
 }
 
-/* line 327, ../sass/screen.scss */
+/* line 338, ../sass/screen.scss */
 .statistik-table td:last-child {
   border: none;
 }
 
-/* line 331, ../sass/screen.scss */
+/* line 342, ../sass/screen.scss */
 .statistik-table tr:nth-child(odd) {
   background: #ffffff;
 }
 
-/* line 335, ../sass/screen.scss */
+/* line 346, ../sass/screen.scss */
 .statistik-table tr:nth-child(even) {
   background: rgba(255, 255, 255, 0.5);
 }
 
-/* line 339, ../sass/screen.scss */
+/* line 350, ../sass/screen.scss */
 .gallery-list {
   margin: 0;
   padding: 2em 0;
@@ -712,7 +723,7 @@ header.logo {
   list-style-type: none;
 }
 
-/* line 349, ../sass/screen.scss */
+/* line 360, ../sass/screen.scss */
 .gallery-item {
   width: 31.03448%;
   height: 31.03448%;
@@ -722,18 +733,18 @@ header.logo {
   margin-bottom: 3.44828%;
   padding: 1em;
 }
-/* line 356, ../sass/screen.scss */
+/* line 367, ../sass/screen.scss */
 .gallery-item:nth-child(3n) {
   margin-right: 0;
 }
 
-/* line 362, ../sass/screen.scss */
+/* line 373, ../sass/screen.scss */
 .gallery-item img {
   max-width: 100%;
   max-height: 100%;
 }
 
-/* line 367, ../sass/screen.scss */
+/* line 378, ../sass/screen.scss */
 .contact {
   clear: both;
   width: 100%;
@@ -744,12 +755,12 @@ header.logo {
   margin-top: 1em;
 }
 
-/* line 374, ../sass/screen.scss */
+/* line 385, ../sass/screen.scss */
 .contact h2 {
   margin-left: 16.94915%;
 }
 
-/* line 378, ../sass/screen.scss */
+/* line 389, ../sass/screen.scss */
 .contact > div {
   width: 66.10169%;
   margin: 2.5641% auto;
@@ -760,20 +771,20 @@ header.logo {
   margin-top: 0;
 }
 
-/* line 387, ../sass/screen.scss */
+/* line 398, ../sass/screen.scss */
 .contact ul {
   list-style: none;
   padding: 0;
 }
 
-/* line 392, ../sass/screen.scss */
+/* line 403, ../sass/screen.scss */
 .contact-management, .contact-interview {
   width: 35.89744%;
   float: left;
   margin-right: 2.5641%;
 }
 
-/* line 396, ../sass/screen.scss */
+/* line 407, ../sass/screen.scss */
 .contact-map {
   width: 23.07692%;
   float: right;
@@ -781,7 +792,7 @@ header.logo {
 }
 
 @media (max-width: 800px) {
-  /* line 401, ../sass/screen.scss */
+  /* line 412, ../sass/screen.scss */
   html {
     background: red;
   }
