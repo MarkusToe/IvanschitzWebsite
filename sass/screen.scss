@@ -1,0 +1,441 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "normalize";
+@import "compass";
+@import "susy";
+
+// Configuring Susy Defaults
+$susy: (
+        columns: 12,
+        gutters: 1/4,
+        math: fluid,
+        output: float,
+        debug: (
+                image: show,
+                toggle: top right,
+        ),
+);
+
+@include border-box-sizing;
+
+html {
+  background: #577685;
+}
+
+[role="navigation"] {
+  position: fixed;
+  top: 1em;
+  right: 1.7em;
+  width: 70%;
+  font-size: 0.875rem;
+  padding: 0px;
+  margin: 0px;
+  min-height: 0;
+  background: transparent;
+}
+
+.main-nav,
+.main-nav ul {
+  text-transform: uppercase;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav {float: right;}
+
+.main-nav:after {
+  clear: both;
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.main-nav li {
+  list-style: none;
+  float:left;
+  background: #ffffff;
+}
+
+.main-nav > li {
+  width: auto;
+  padding: 0 2em;
+}
+
+.main-nav li a {
+  text-decoration: none;
+  display: block;
+  color: #333;
+  padding: .5em 0;
+  text-align: center;
+}
+
+.main-nav > li:last-child a { border: none; }
+
+.main-nav li:hover > ul { visibility: visible; }
+
+.main-nav ul{
+  display: inline;
+  visibility: hidden;
+  position: absolute;
+  padding:0px;
+  margin-left: -1em;
+}
+
+.main-nav ul li{ float: none; }
+
+.main-nav ul a {
+  padding: .5em 1em;
+  border: none;
+  text-align: left;
+}
+
+.control { display: none; }
+
+main {
+  @include span(8);
+  margin: 0 auto;
+  float: none;
+  margin-top: 4em;
+}
+
+h1 {
+  margin: 0;
+}
+
+.container {
+  @include container;
+  @include clearfix;
+
+  // Changing to a 8 column grid
+  @media (min-width: 800px) {
+    @include show-grid(8);
+  }
+
+  // Changing to a 12 column grid
+  @media (min-width: 1200px) {
+    @include show-grid(12);
+  }
+}
+
+/*
+ * Typography
+ */
+
+h2 {
+  text-transform: uppercase;
+  background: #ffffff;
+  display: inline-block;
+  margin: 1em 0 1em 2em;
+  padding: .25em 1em;
+  /*margin-left: 2.5em;
+  margin-bottom: 1em;*/
+  position: relative;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+h2::before {
+  content: "";
+  height: 0;
+  width: 0;
+  display: inline-block;
+  border-bottom: 2em solid #ffffff;
+  border-left: 2em solid transparent;
+  position: absolute;
+  left: -2em;
+  top: 0;
+}
+
+h2::after {
+  content: "";
+  height: 0;
+  width: 0;
+  display: inline-block;
+  border-bottom: 2em solid transparent;
+  border-left: 2em solid #ffffff;
+  position: absolute;
+  right: -2em;
+  top: 0;
+}
+
+.news,
+.biography,
+.sportler,
+.steckbrief,
+.statistik
+main {
+  @include clearfix;
+}
+
+.logo {
+  background: url("../img/logo.png") 0 0 no-repeat;
+  background-size: 100%;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: span(3) + gutter(12);
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.news_entry {
+  @include span(4 of 8);
+}
+
+.news_entry:nth-child(odd) {
+  margin-right: 0;
+  float: right;
+}
+
+.news_entry time {
+  text-transform: uppercase;
+}
+
+.news-text {
+  @include span(3 of 4 last);
+  background: rgba(255, 255, 255, .5);
+}
+
+.news-text > p {
+  padding: 0 1em;
+}
+
+.news-text header {
+  padding: 1em;
+}
+
+.news-summary {
+  margin: 1em 0;
+  font-style: italic;
+}
+
+.news-text header {
+  background: #ffffff;
+  text-transform: uppercase;
+}
+
+.news-text header h3 {
+  margin: 0;
+  line-height: 1em;
+}
+
+.biography_text {
+  @include span(5 of 8 last);
+  background: rgba(255, 255, 255, .5);
+  padding: gutter(8);
+}
+
+.biography h3 {
+  text-transform: uppercase;
+  margin: 1em 0;
+}
+
+.verein {
+  margin-bottom: 1em;
+}
+
+.verein-date {
+  background: #ffffff;
+  margin-left: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  font-size: 0.875em;
+  position: relative;
+  display: inline-block;
+}
+
+.verein-date::before {
+  content: "";
+  height: 0;
+  width: 0;
+  display: inline-block;
+  border-bottom: 1.5em solid #ffffff;
+  border-left: 1.5em solid transparent;
+  position: absolute;
+  left: -1.5em;
+}
+
+.verein-date::after {
+  content: "";
+  height: 0;
+  width: 0;
+  display: inline-block;
+  border-bottom: 1.5em solid transparent;
+  border-left: 1.5em solid #ffffff;
+  position: absolute;
+  right: -1.5em;
+  top: 0;
+}
+
+.verein-logo {
+  background: #ffffff;
+  width: span(2 of 8);
+  padding: 2em;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: .75em;
+}
+
+.verein-logo p {
+  font-style: italic;
+  margin: 0;
+}
+
+.steckbrief > div {
+  padding: gutter(8);
+  background-color: rgba(255, 255, 255, .5);
+}
+
+.steckbrief-table td {
+  padding: .5em 0;
+}
+
+.steckbrief-table p {
+  margin: 0;
+}
+
+.steckbrief-table tr td:first-child {
+  width: span(2 of 8) - gutter(8);
+  text-align: right;
+  vertical-align: top;
+  text-transform: uppercase;
+  color: #939598;
+  font-weight: bold;
+}
+
+.steckbrief-table tr td:last-child {
+  padding-left: gutter(8);
+}
+
+.statistik {
+  font-size: .875em;
+}
+
+.statistik > div {
+  background: rgba(255, 255, 255, .5);
+  padding: gutter(8);
+}
+
+.statistik-table {
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.statistik-table th, .statistik-table td {
+  border-right: 1px solid #adadad;
+  padding: .5em 1em;
+}
+
+.statistik-table td:last-child {
+  border: none;
+}
+
+.statistik-table tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+.statistik-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, .5);
+}
+
+.gallery-list {
+  margin: 0;
+  padding: 2em 0;
+  padding-left: span(1 of 8) + gutter(8);
+  padding-right: span(1 of 8) + gutter(8);
+  @include clearfix;
+  background: rgba(255, 255, 255, .5);
+  list-style-type: none;
+}
+
+.gallery-item {
+  width: span(2 of 6);
+  height: span(2 of 6 );
+  background: #ffffff;
+  float: left;
+  margin-right: gutter(6);
+  margin-bottom: gutter(6);
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+  padding: 1em;
+}
+
+.gallery-item img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.charity article {
+  background: rgba(255, 255, 255, .5);
+  padding-left: gutter(8) + span(1 of 8);
+  padding-right: gutter(8) + span(1 of 8);
+  padding-bottom: 2em;
+}
+
+.charity article h3 {
+  padding: 2em 0;
+  background: url("../img/article-header-bg.png") no-repeat left 50%;
+  padding-left: 48px;
+}
+
+.charity article h4 {
+  padding: 1em 0;
+}
+
+.charity article img {
+  float: left;
+  padding-right: gutter(8);
+  padding-bottom: 1em;
+  width: 100%;
+  max-width: span(2 of 6) + gutter(8);
+}
+
+.contact{
+  clear: both;
+  @include span(full);
+  background: rgba(255, 255, 255, .5);
+  margin-top: 1em;
+}
+
+.contact h2 {
+  margin-left: span(2 of 12) + gutter(12);
+}
+
+.contact > div {
+  width: span(8);
+  margin: gutter(8) auto;
+  padding: gutter(8);
+  background: rgba(255, 255, 255, .5);
+  @include clearfix;
+  margin-top: 0;
+}
+
+.contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-management, .contact-interview {
+  @include span(3 of 8);
+}
+
+.contact-map {
+  @include span(2 of 8 last);
+}
+
+@media (max-width: 800px) {
+  html {
+    background: red;
+  }
+}
