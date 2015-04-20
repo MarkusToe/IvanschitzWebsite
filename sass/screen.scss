@@ -7,6 +7,35 @@
 @import "compass";
 @import "susy";
 
+
+$main-nav-height: 2.5em;
+
+.before {
+  content: "";
+  height: 0;
+  width: 0;
+  display: inline-block;
+  border-bottom: 2em solid #ffffff;
+  border-left: 2em solid transparent;
+  position: absolute;
+  left: -2em;
+  top: 0;
+}
+
+.after {
+  content: "";
+  height: 0;
+  width: 0;
+  display: inline-block;
+  border-bottom: 2em solid transparent;
+  border-left: 2em solid #ffffff;
+  position: absolute;
+  right: -2em;
+  top: 0;
+}
+
+
+
 // Configuring Susy Defaults
 $susy: (
         columns: 12,
@@ -37,63 +66,97 @@ html {
   background: transparent;
 }
 
-.main-nav,
-.main-nav ul {
-  text-transform: uppercase;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
+.main-nav {
+  float: right;
+  &:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  > li {
+    width: auto;
+    &:last-child a {
+      border: none;
+    }
+  }
+  li {
+    list-style: none;
+    float:left;
+
+    a {
+      height: $main-nav-height;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      padding: $main-nav-height / 5 0.1em;
+      margin-right: $main-nav-height;
+      text-decoration: none;
+      display: block;
+      color: #333;
+      text-align: center;
+      position: relative;
+      background: rgba(255, 255, 255, 0.8);
+      &::before {
+        @extend .before;
+        border-bottom: $main-nav-height solid rgba(255, 255, 255, 0.8);
+        border-left: $main-nav-height solid transparent;
+        left: - $main-nav-height;
+      }
+      &::after {
+        @extend .after;
+        border-bottom: $main-nav-height solid transparent;
+        border-left: $main-nav-height solid rgba(255, 255, 255, 0.8);
+        right: - $main-nav-height;
+
+      }
+    }
+    &:hover, .active {
+      cursor: pointer;
+      a {
+        background: #ffffff;
+        &::before {
+          border-bottom-color: #ffffff;
+        }
+        &::after {
+          border-left-color: #ffffff;
+        }
+      }
+      > ul {
+        visibility: visible;
+        margin-left: - $main-nav-height;
+        a::before, a::after {
+          border: none;
+
+        }
+        a {
+          padding-left: $main-nav-height / 5 + 0.2;
+          padding-right: $main-nav-height / 5 + 0.2;
+          &:hover {
+            background: rgba(255, 255, 255, 0.8);
+          }
+        }
+      }
+    }
+  }
+  ul {
+    display: inline;
+    visibility: hidden;
+    position: absolute;
+    padding: 0px;
+    a {
+      border: none;
+      text-align: left;
+    }
+
+    li{
+      float: none;
+    }
+  }
 }
 
-.main-nav {float: right;}
-
-.main-nav:after {
-  clear: both;
-  content: " ";
-  display: block;
-  font-size: 0;
-  height: 0;
-  visibility: hidden;
-}
-
-.main-nav li {
-  list-style: none;
-  float:left;
-  background: #ffffff;
-}
-
-.main-nav > li {
-  width: auto;
-  padding: 0 2em;
-}
-
-.main-nav li a {
-  text-decoration: none;
-  display: block;
-  color: #333;
-  padding: .5em 0;
-  text-align: center;
-}
-
-.main-nav > li:last-child a { border: none; }
-
-.main-nav li:hover > ul { visibility: visible; }
-
-.main-nav ul{
-  display: inline;
-  visibility: hidden;
-  position: absolute;
-  padding:0px;
-  margin-left: -1em;
-}
-
-.main-nav ul li{ float: none; }
-
-.main-nav ul a {
-  padding: .5em 1em;
-  border: none;
-  text-align: left;
-}
 
 .control { display: none; }
 
@@ -141,27 +204,11 @@ h2 {
 }
 
 h2::before {
-  content: "";
-  height: 0;
-  width: 0;
-  display: inline-block;
-  border-bottom: 2em solid #ffffff;
-  border-left: 2em solid transparent;
-  position: absolute;
-  left: -2em;
-  top: 0;
+  @extend .before;
 }
 
 h2::after {
-  content: "";
-  height: 0;
-  width: 0;
-  display: inline-block;
-  border-bottom: 2em solid transparent;
-  border-left: 2em solid #ffffff;
-  position: absolute;
-  right: -2em;
-  top: 0;
+  @extend .after;
 }
 
 .news,
