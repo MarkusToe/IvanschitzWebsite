@@ -7,6 +7,18 @@
 @import "compass";
 @import "susy";
 
+// Configuring Susy Defaults
+$susy: (
+        columns: 12,
+        gutters: 1/4,
+        math: fluid,
+        output: float,
+        debug: (
+                image: hide,
+                toggle: top right,
+        ),
+);
+
 
 $main-nav-height: 2.5em;
 
@@ -34,19 +46,6 @@ $main-nav-height: 2.5em;
   top: 0;
 }
 
-
-
-// Configuring Susy Defaults
-$susy: (
-        columns: 12,
-        gutters: 1/4,
-        math: fluid,
-        output: float,
-        debug: (
-                image: show,
-                toggle: top right,
-        ),
-);
 
 @include border-box-sizing;
 
@@ -157,6 +156,18 @@ html {
   }
 }
 
+
+body {
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
 
 .control { display: none; }
 

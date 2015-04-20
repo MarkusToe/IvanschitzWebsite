@@ -3,5 +3,5 @@ $( document ).ready(function() {
         e.preventDefault();
         console.log('clicked');
         $('body').toggleClass('active-nav');
-    })
+    });
 });
