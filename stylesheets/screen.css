@@ -821,8 +821,13 @@ main {
   margin-right: 0;
 }
 
+/* line 437, ../sass/screen.scss */
+footer {
+  background: #ffffff;
+}
+
 @media (max-width: 800px) {
-  /* line 438, ../sass/screen.scss */
+  /* line 442, ../sass/screen.scss */
   html {
     background: red;
   }
