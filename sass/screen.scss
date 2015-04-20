@@ -21,6 +21,7 @@ $susy: (
 
 
 $main-nav-height: 2.5em;
+$footer-width: 300px;
 
 .before {
   content: "";
@@ -492,8 +493,85 @@ main {
   @include span(2 of 8 last);
 }
 
+
 footer {
-  background: #ffffff;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: $footer-width;
+  height: $footer-width;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: - $footer-width / 2;
+    right: - $footer-width / 2;
+    width: $footer-width;
+    height: $footer-width;
+    background: #ffffff;
+    transform: rotate(45deg);
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    padding-right: 20px;
+  }
+
+  .social-media {
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    i {
+      font-size: 1.2em;
+      color: gray;
+      &:hover {
+        color: black;
+      }
+    }
+    a {
+      position: relative;
+      padding-bottom: 20px;
+
+    }
+    li {
+      position: relative;
+      a:after {
+        content: '/';
+        position: absolute;
+        top: 8px;
+        right: 27px;
+        transform: rotate(26deg);
+        font-size: 2em;
+        color: gray;
+      }
+    }
+
+  }
+  .lang {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    a {
+      color: gray;
+      font-size: 0.8em;
+    }
+    .active {
+      color: black;
+    }
+  }
+  .adidas img {
+    position: absolute;
+    bottom: 19px;
+    right: 70px;
+    width: 70px;
+  }
+
 }
 
 @media (max-width: 800px) {
