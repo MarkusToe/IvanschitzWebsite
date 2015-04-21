@@ -21,7 +21,7 @@ $susy: (
 
 
 $main-nav-height: 2.5em;
-$footer-width: 300px;
+$footer-width: 16em;
 
 .before {
   content: "";
@@ -52,6 +52,10 @@ $footer-width: 300px;
 
 html {
   background: #577685;
+}
+
+body {
+  overflow: hidden;
 }
 
 [role="navigation"] {
@@ -498,12 +502,12 @@ footer {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: $footer-width;
-  height: $footer-width;
-  padding-top: 10em;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  background: white;
+  width: span(2) + gutter(12);
+  height: 100%;
+  background: url("../img/footer-edge.png") no-repeat right bottom;
+  background-size: 100%;
+  text-align: right;
+
   ul {
     list-style-type: none;
     margin: 0;
@@ -519,9 +523,6 @@ footer {
   }
 
   .social-media {
-    width: 2em;
-    float: right;
-    margin-left: $footer-width - 3;
     i {
       font-size: 1.5em;
       color: gray;
@@ -531,12 +532,11 @@ footer {
     }
     a {
       padding: 5px 0;
-      float: right;
     }
   }
   .lang {
-    float: right;
     margin-top: 13px;
+    float: right;
     a {
       color: gray;
       font-size: 0.8em;
@@ -547,42 +547,20 @@ footer {
   }
   .adidas {
     float: right;
-    margin-right: 40px;
+    margin-right: 2em;
+
     img {
-      width: 4em;
       margin-top: 0.5em;
     }
   }
 }
-footer {
-  @media all and (max-width: 50em) {
-    width: 100%;
-    height: 4em;
-    padding: 0 2em;
-    .social-media {
-      margin-left: 0;
-      width: 5em;
-      line-height: 4em;
-      a {
-        margin-left: 15px;
-      }
-    }
-    .adidas {
-      float: left;
-      line-height: 4em;
-    }
-    .lang {
-      line-height: 4em;
-      margin-top: 0;
-      li {
-        float: right;
-        a {
-          padding-left: 1em;
-          font-size: 1.2em;
-        }
-      }
-    }
-  }
+
+.footer-inner {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 1em;
+  width: 100%;
 }
 
 @media all and (max-width: 72em) {
@@ -622,6 +600,10 @@ footer {
       }
     }
   }
+
+  footer {
+    width: span(3) + gutter(12);
+  }
 }
 
 @media all and (max-width: 50em) {
@@ -634,10 +616,12 @@ footer {
 
   [role="navigation"] {
     width: 95%;
+
     position: absolute;
     z-index: 1;
     top: 0;
-    right: -95%;
+    right: 0;
+    margin-right: -95%;
     bottom: 0;
     height: 100%;
     background: black;
@@ -650,7 +634,7 @@ footer {
   }
 
   .active-nav [role="navigation"] {
-    right: 0;
+    margin-right: 0;
   }
 
   .main-nav {
@@ -711,6 +695,7 @@ footer {
       a:before, a:after {
         display: none;
         margin: 0;
+        
       }
 
       &:first-child,
@@ -721,4 +706,71 @@ footer {
       }
     }
   }
+
+  footer {
+    width: 100%;
+    height: auto;
+    padding: 1em 2em;
+    background-image: none;
+    background: #ffffff;
+
+    .social-media {
+      float: right;
+      margin-left: 1em;
+
+      li {
+        float: left;
+      }
+
+      a {
+        margin-left: 15px;
+        padding: 0;
+
+        i {
+          line-height: 48px;
+        }
+      }
+    }
+    .adidas {
+      float: left;
+
+      img {
+        margin: 0;
+        display: block;
+      }
+    }
+    .lang {
+      float: right;
+      margin: 0;
+      line-height: 48px;
+
+      li {
+        float: right;
+        a {
+          padding-left: .5em;
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+
+  .footer-inner {
+    padding: 0;
+    position: relative;
+
+  }
 }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
