@@ -915,6 +915,31 @@ footer .adidas img {
   }
 
   /* line 585, ../sass/screen.scss */
+  .main-nav {
+    min-width: 600px;
+  }
+  /* line 589, ../sass/screen.scss */
+  .main-nav li a {
+    margin-right: 0px;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  /* line 595, ../sass/screen.scss */
+  .main-nav li a:before, .main-nav li a:after {
+    display: none;
+    margin: 0;
+  }
+  /* line 600, ../sass/screen.scss */
+  .main-nav li:first-child a:before {
+    display: block;
+  }
+  /* line 605, ../sass/screen.scss */
+  .main-nav li:last-child a:after {
+    display: block;
+  }
+}
+@media all and (max-width: 50em) {
+  /* line 614, ../sass/screen.scss */
   [role="navigation"] {
     width: 75%;
     position: absolute;
@@ -922,26 +947,50 @@ footer .adidas img {
     top: 0;
     right: 0;
     bottom: 0;
+    height: 100%;
     background: black;
   }
 
-  /* line 596, ../sass/screen.scss */
+  /* line 625, ../sass/screen.scss */
   .main-nav {
     float: none;
+    padding: 0;
+    margin-top: 1em;
   }
-  /* line 599, ../sass/screen.scss */
+  /* line 630, ../sass/screen.scss */
+  .main-nav ul {
+    display: block;
+    visibility: visible;
+    position: relative;
+    margin: 0;
+  }
+  /* line 636, ../sass/screen.scss */
+  .main-nav ul a {
+    text-align: center;
+    font-size: .875em;
+  }
+  /* line 642, ../sass/screen.scss */
+  .main-nav > li {
+    padding: .5em 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  /* line 647, ../sass/screen.scss */
   .main-nav li {
     float: none;
   }
-  /* line 602, ../sass/screen.scss */
+  /* line 650, ../sass/screen.scss */
+  .main-nav li a {
+    background: transparent;
+    color: white;
+    margin: 0;
+  }
+  /* line 655, ../sass/screen.scss */
+  .main-nav li a:hover {
+    background: transparent;
+  }
+  /* line 660, ../sass/screen.scss */
   .main-nav li a:before, .main-nav li a:after {
     display: none;
     margin: 0;
-  }
-}
-@media all and (max-width: 35em) {
-  /* line 611, ../sass/screen.scss */
-  [role="navigation"] {
-    width: 75%;
   }
 }
