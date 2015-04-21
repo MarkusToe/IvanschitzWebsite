@@ -575,16 +575,12 @@ footer {
 }
 
 @media all and (max-width: 72em) {
-  .control {
-    display: block;
-    position: absolute;
-    top: 1em;
-    right: 1em;
+  [role="navigation"] {
+    width: 100%;
+    right: 3em;
   }
 
   .main-nav {
-    min-width: 600px;
-
     li {
       a {
         margin-right: 0px;
@@ -611,8 +607,15 @@ footer {
 }
 
 @media all and (max-width: 50em) {
+  .control {
+    display: block;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+  }
+
   [role="navigation"] {
-    width: 75%;
+    width: 95%;
     position: absolute;
     z-index: 1;
     top: 0;
@@ -640,7 +643,7 @@ footer {
     }
 
     > li {
-      padding: .5em 0;
+      padding: 1em 0;
       border-bottom: 1px solid rgba(255, 255, 255, .2);
     }
 
@@ -651,6 +654,8 @@ footer {
         background: transparent;
         color: white;
         margin: 0;
+        padding: 0;
+        height: 100%;
 
         &:hover {
           background: transparent;
@@ -660,6 +665,13 @@ footer {
       a:before, a:after {
         display: none;
         margin: 0;
+      }
+
+      &:first-child,
+      &:last-child {
+        a:before, a:after {
+          display: none !important;
+        }
       }
     }
   }
