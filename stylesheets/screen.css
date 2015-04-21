@@ -390,21 +390,21 @@ html {
   border-left-color: #ffffff;
 }
 /* line 127, ../sass/screen.scss */
-.main-nav li:hover > ul, .main-nav li .active > ul {
+.main-nav li:hover ul, .main-nav li .active ul {
   visibility: visible;
   margin-left: -2.5em;
 }
 /* line 130, ../sass/screen.scss */
-.main-nav li:hover > ul a::before, .main-nav li:hover > ul a::after, .main-nav li .active > ul a::before, .main-nav li .active > ul a::after {
+.main-nav li:hover ul a::before, .main-nav li:hover ul a::after, .main-nav li .active ul a::before, .main-nav li .active ul a::after {
   border: none;
 }
 /* line 134, ../sass/screen.scss */
-.main-nav li:hover > ul a, .main-nav li .active > ul a {
+.main-nav li:hover ul a, .main-nav li .active ul a {
   padding-left: 0.7em;
   padding-right: 0.7em;
 }
 /* line 137, ../sass/screen.scss */
-.main-nav li:hover > ul a:hover, .main-nav li .active > ul a:hover {
+.main-nav li:hover ul a:hover, .main-nav li .active ul a:hover {
   background: rgba(255, 255, 255, 0.8);
 }
 /* line 144, ../sass/screen.scss */
@@ -929,81 +929,171 @@ footer .adidas img {
 }
 
 @media all and (max-width: 72em) {
+<<<<<<< HEAD
   /* line 589, ../sass/screen.scss */
+=======
+  /* line 578, ../sass/screen.scss */
+  main {
+    width: 95%;
+  }
+
+  /* line 582, ../sass/screen.scss */
+>>>>>>> f183b2908deb769d9a0f21325c0b46240cfa5534
   [role="navigation"] {
     width: 100%;
     right: 3em;
   }
 
+<<<<<<< HEAD
   /* line 596, ../sass/screen.scss */
+=======
+  /* line 589, ../sass/screen.scss */
+>>>>>>> f183b2908deb769d9a0f21325c0b46240cfa5534
   .main-nav li a {
     margin-right: 0px;
     padding-right: 5px;
     padding-left: 5px;
   }
+<<<<<<< HEAD
   /* line 602, ../sass/screen.scss */
+=======
+  /* line 595, ../sass/screen.scss */
+>>>>>>> f183b2908deb769d9a0f21325c0b46240cfa5534
   .main-nav li a:before, .main-nav li a:after {
     display: none;
     margin: 0;
   }
+<<<<<<< HEAD
   /* line 607, ../sass/screen.scss */
   .main-nav li:first-child a:before {
     display: block;
   }
   /* line 612, ../sass/screen.scss */
+=======
+  /* line 600, ../sass/screen.scss */
+  .main-nav li:first-child a:before {
+    display: block;
+  }
+  /* line 605, ../sass/screen.scss */
+>>>>>>> f183b2908deb769d9a0f21325c0b46240cfa5534
   .main-nav li:last-child a:after {
     display: block;
   }
+  /* line 609, ../sass/screen.scss */
+  .main-nav li:hover ul {
+    margin-left: 0;
+  }
 }
 @media all and (max-width: 50em) {
+<<<<<<< HEAD
   /* line 621, ../sass/screen.scss */
+=======
+  /* line 617, ../sass/screen.scss */
+>>>>>>> f183b2908deb769d9a0f21325c0b46240cfa5534
   .control {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 1em;
     right: 1em;
   }
 
+<<<<<<< HEAD
   /* line 628, ../sass/screen.scss */
+=======
+  /* line 624, ../sass/screen.scss */
+>>>>>>> f183b2908deb769d9a0f21325c0b46240cfa5534
   [role="navigation"] {
     width: 95%;
     position: absolute;
     z-index: 1;
     top: 0;
-    right: 0;
+    right: -95%;
     bottom: 0;
     height: 100%;
     background: black;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -ms-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+    box-shadow: 1px 10px 4px 6px rgba(0, 0, 0, 0.25);
   }
 
+  /* line 641, ../sass/screen.scss */
+  .active-nav [role="navigation"] {
+    right: 0;
+  }
+
+<<<<<<< HEAD
   /* line 639, ../sass/screen.scss */
+=======
+  /* line 645, ../sass/screen.scss */
+>>>>>>> f183b2908deb769d9a0f21325c0b46240cfa5534
   .main-nav {
     float: none;
     padding: 0;
     margin-top: 1em;
   }
+<<<<<<< HEAD
   /* line 644, ../sass/screen.scss */
+=======
+  /* line 650, ../sass/screen.scss */
+>>>>>>> f183b2908deb769d9a0f21325c0b46240cfa5534
   .main-nav ul {
     display: block;
     visibility: visible;
     position: relative;
     margin: 0;
   }
+<<<<<<< HEAD
   /* line 650, ../sass/screen.scss */
+=======
+  /* line 656, ../sass/screen.scss */
+>>>>>>> f183b2908deb769d9a0f21325c0b46240cfa5534
   .main-nav ul a {
     text-align: center;
     font-size: .875em;
+    font-weight: 100;
   }
+<<<<<<< HEAD
   /* line 656, ../sass/screen.scss */
+=======
+  /* line 661, ../sass/screen.scss */
+  .main-nav ul a:hover {
+    color: #dddddd;
+  }
+  /* line 667, ../sass/screen.scss */
+>>>>>>> f183b2908deb769d9a0f21325c0b46240cfa5534
   .main-nav > li {
     padding: 1em 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
+<<<<<<< HEAD
   /* line 661, ../sass/screen.scss */
+=======
+  /* line 672, ../sass/screen.scss */
+  .main-nav > li:last-child {
+    border-bottom: none;
+  }
+  /* line 676, ../sass/screen.scss */
+>>>>>>> f183b2908deb769d9a0f21325c0b46240cfa5534
   .main-nav li {
     float: none;
+    background: transparent;
   }
+  /* line 680, ../sass/screen.scss */
+  .main-nav li:hover {
+    background: transparent;
+  }
+<<<<<<< HEAD
   /* line 664, ../sass/screen.scss */
+=======
+  /* line 683, ../sass/screen.scss */
+  .main-nav li:hover a, .main-nav li:hover ul a:hover {
+    background: transparent;
+  }
+  /* line 688, ../sass/screen.scss */
+>>>>>>> f183b2908deb769d9a0f21325c0b46240cfa5534
   .main-nav li a {
     background: transparent;
     color: white;
@@ -1011,16 +1101,28 @@ footer .adidas img {
     padding: 0;
     height: 100%;
   }
+<<<<<<< HEAD
   /* line 671, ../sass/screen.scss */
   .main-nav li a:hover {
     background: transparent;
   }
   /* line 676, ../sass/screen.scss */
+=======
+  /* line 695, ../sass/screen.scss */
+  .main-nav li a:hover {
+    background: transparent;
+  }
+  /* line 700, ../sass/screen.scss */
+>>>>>>> f183b2908deb769d9a0f21325c0b46240cfa5534
   .main-nav li a:before, .main-nav li a:after {
     display: none;
     margin: 0;
   }
+<<<<<<< HEAD
   /* line 683, ../sass/screen.scss */
+=======
+  /* line 707, ../sass/screen.scss */
+>>>>>>> f183b2908deb769d9a0f21325c0b46240cfa5534
   .main-nav li:first-child a:before, .main-nav li:first-child a:after, .main-nav li:last-child a:before, .main-nav li:last-child a:after {
     display: none !important;
   }

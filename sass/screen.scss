@@ -124,7 +124,7 @@ html {
           border-left-color: #ffffff;
         }
       }
-      > ul {
+      ul {
         visibility: visible;
         margin-left: - $main-nav-height;
         a::before, a::after {
@@ -586,6 +586,10 @@ footer {
 }
 
 @media all and (max-width: 72em) {
+  main {
+    width: 95%;
+  }
+
   [role="navigation"] {
     width: 100%;
     right: 3em;
@@ -613,6 +617,9 @@ footer {
           display: block;
         }
       }
+      &:hover ul {
+        margin-left: 0;
+      }
     }
   }
 }
@@ -620,7 +627,7 @@ footer {
 @media all and (max-width: 50em) {
   .control {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 1em;
     right: 1em;
   }
@@ -630,10 +637,20 @@ footer {
     position: absolute;
     z-index: 1;
     top: 0;
-    right: 0;
+    right: -95%;
     bottom: 0;
     height: 100%;
     background: black;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -ms-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+    box-shadow: 1px 10px 4px 6px rgba(0, 0, 0, 0.25);
+  }
+
+  .active-nav [role="navigation"] {
+    right: 0;
   }
 
   .main-nav {
@@ -650,6 +667,11 @@ footer {
       a {
         text-align: center;
         font-size: .875em;
+        font-weight: 100;
+
+        &:hover {
+          color: #dddddd;
+        }
       }
     }
 
@@ -658,8 +680,21 @@ footer {
       border-bottom: 1px solid rgba(255, 255, 255, .2);
     }
 
+    > li:last-child {
+      border-bottom: none;
+    }
+
     li {
       float: none;
+      background: transparent;
+
+      &:hover {
+        background: transparent;
+
+        a, ul a:hover {
+          background: transparent;
+        }
+      }
 
       a {
         background: transparent;
