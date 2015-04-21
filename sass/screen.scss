@@ -55,7 +55,7 @@ html {
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 [role="navigation"] {
@@ -174,7 +174,14 @@ body {
 
 }
 
-.control { display: none; }
+.control {
+  display: none;
+  text-decoration: none;
+  color: black;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 4px 8px;
+  font-size: 1.3em;
+}
 
 main {
   @include span(8);
