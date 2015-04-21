@@ -7,6 +7,13 @@
 @import "compass";
 @import "susy";
 
+@import "variables";
+@import "base";
+@import "layout";
+@import "module";
+@import "state";
+
+
 // Configuring Susy Defaults
 $susy: (
         columns: 12,
@@ -218,6 +225,7 @@ main {
   @include span(5 of 8 last);
   background: rgba(255, 255, 255, .5);
   padding: gutter(8);
+
 }
 
 .biography h3 {
