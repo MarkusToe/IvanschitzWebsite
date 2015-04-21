@@ -23,6 +23,97 @@ $susy: (
 $main-nav-height: 2.5em;
 $footer-width: 16em;
 
+/*
+** =Base
+************************/
+body {
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+html {
+  background: #577685;
+}
+
+ul {
+  list-style-type: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  @include span(8);
+  margin: 0 auto;
+  float: none;
+  margin-top: 4em;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  text-transform: uppercase;
+  background: #ffffff;
+  display: inline-block;
+  margin: 1em 0 1em 2em;
+  padding: .25em 1em;
+  /*margin-left: 2.5em;
+  margin-bottom: 1em;*/
+  position: relative;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+h2::before {
+  @extend .before;
+}
+
+h2::after {
+  @extend .after;
+}
+
+/*
+** =Layout
+************************/
+.news,
+.biography,
+.sportler,
+.steckbrief,
+.statistik
+main {
+  @include clearfix;
+}
+
+.container {
+  @include container;
+  @include clearfix;
+
+  // Changing to a 8 column grid
+  @media (min-width: 800px) {
+    @include show-grid(8);
+  }
+
+  // Changing to a 12 column grid
+  @media (min-width: 1200px) {
+    @include show-grid(12);
+  }
+}
+
+/*
+** =Module
+************************/
 .before {
   content: "";
   height: 0;
@@ -47,200 +138,8 @@ $footer-width: 16em;
   top: 0;
 }
 
-
-@include border-box-sizing;
-
-html {
-  background: #577685;
-}
-
-body {
-  overflow-x: hidden;
-}
-
-[role="navigation"] {
-  position: fixed;
-  top: 1em;
-  right: 1.7em;
-  width: 70%;
-  font-size: 0.875rem;
-  padding: 0px;
-  margin: 0px;
-  min-height: 0;
-  background: transparent;
-}
-
-.main-nav {
-  float: right;
-  &:after {
-    clear: both;
-    content: " ";
-    display: block;
-    font-size: 0;
-    height: 0;
-    visibility: hidden;
-  }
-  > li {
-    width: auto;
-    &:last-child a {
-      border: none;
-    }
-  }
-  li {
-    list-style: none;
-    float:left;
-
-    a {
-      height: $main-nav-height;
-      text-transform: uppercase;
-      font-weight: bold;
-
-      padding: $main-nav-height / 5 0.1em;
-      margin-right: $main-nav-height;
-      text-decoration: none;
-      display: block;
-      color: #333;
-      text-align: center;
-      position: relative;
-      background: rgba(255, 255, 255, 0.8);
-      &::before {
-        @extend .before;
-        border-bottom: $main-nav-height solid rgba(255, 255, 255, 0.8);
-        border-left: $main-nav-height solid transparent;
-        left: - $main-nav-height;
-      }
-      &::after {
-        @extend .after;
-        border-bottom: $main-nav-height solid transparent;
-        border-left: $main-nav-height solid rgba(255, 255, 255, 0.8);
-        right: - $main-nav-height;
-
-      }
-    }
-    &:hover, .active {
-      cursor: pointer;
-      a {
-        background: #ffffff;
-        &::before {
-          border-bottom-color: #ffffff;
-        }
-        &::after {
-          border-left-color: #ffffff;
-        }
-      }
-      ul {
-        visibility: visible;
-        margin-left: - $main-nav-height;
-        a::before, a::after {
-          border: none;
-
-        }
-        a {
-          padding-left: $main-nav-height / 5 + 0.2;
-          padding-right: $main-nav-height / 5 + 0.2;
-          &:hover {
-            background: rgba(255, 255, 255, 0.8);
-          }
-        }
-      }
-    }
-  }
-  ul {
-    display: inline;
-    visibility: hidden;
-    position: absolute;
-    padding: 0px;
-    a {
-      border: none;
-      text-align: left;
-    }
-
-    li{
-      float: none;
-    }
-  }
-}
-
-
-body {
-
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-}
-
-.control {
-  display: none;
-  text-decoration: none;
-  color: black;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 4px 8px;
-  font-size: 1.3em;
-}
-
-main {
-  @include span(8);
-  margin: 0 auto;
-  float: none;
-  margin-top: 4em;
-}
-
-h1 {
-  margin: 0;
-}
-
-.container {
-  @include container;
-  @include clearfix;
-
-  // Changing to a 8 column grid
-  @media (min-width: 800px) {
-    @include show-grid(8);
-  }
-
-  // Changing to a 12 column grid
-  @media (min-width: 1200px) {
-    @include show-grid(12);
-  }
-}
-
-/*
- * Typography
- */
-
-h2 {
+.uppercase {
   text-transform: uppercase;
-  background: #ffffff;
-  display: inline-block;
-  margin: 1em 0 1em 2em;
-  padding: .25em 1em;
-  /*margin-left: 2.5em;
-  margin-bottom: 1em;*/
-  position: relative;
-  font-size: 1.5em;
-  line-height: 1.5em;
-}
-
-h2::before {
-  @extend .before;
-}
-
-h2::after {
-  @extend .after;
-}
-
-.news,
-.biography,
-.sportler,
-.steckbrief,
-.statistik
-main {
-  @include clearfix;
 }
 
 .logo {
@@ -258,6 +157,27 @@ main {
   pointer-events: none;
 }
 
+[role="navigation"] {
+  position: fixed;
+  top: 1em;
+  right: 1.7em;
+  width: 70%;
+  font-size: 0.875rem;
+  padding: 0px;
+  margin: 0px;
+  min-height: 0;
+  background: transparent;
+}
+
+.control {
+  display: none;
+  text-decoration: none;
+  color: black;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 4px 8px;
+  font-size: 1.3em;
+}
+
 .news_entry {
   @include span(4 of 8);
 }
@@ -265,10 +185,6 @@ main {
 .news_entry:nth-child(odd) {
   margin-right: 0;
   float: right;
-}
-
-.news_entry time {
-  text-transform: uppercase;
 }
 
 .news-text {
@@ -291,7 +207,6 @@ main {
 
 .news-text header {
   background: #ffffff;
-  text-transform: uppercase;
 }
 
 .news-text header h3 {
@@ -306,7 +221,6 @@ main {
 }
 
 .biography h3 {
-  text-transform: uppercase;
   margin: 1em 0;
 }
 
@@ -398,7 +312,6 @@ main {
 
 .statistik-table {
   width: 100%;
-  text-transform: uppercase;
 }
 
 .statistik-table th, .statistik-table td {
@@ -425,7 +338,6 @@ main {
   padding-right: span(1 of 8) + gutter(8);
   @include clearfix;
   background: rgba(255, 255, 255, .5);
-  list-style-type: none;
 }
 
 .gallery-item {
@@ -491,11 +403,6 @@ main {
   margin-top: 0;
 }
 
-.contact ul {
-  list-style: none;
-  padding: 0;
-}
-
 .contact-management, .contact-interview {
   @include span(3 of 8);
 }
@@ -503,7 +410,6 @@ main {
 .contact-map {
   @include span(2 of 8 last);
 }
-
 
 footer {
   position: fixed;
@@ -515,50 +421,27 @@ footer {
   background-size: 100%;
   text-align: right;
 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
-    -webkit-padding-start: 0;
-  }
   a {
-    text-decoration: none;
-    text-transform: uppercase;
-    display: block;
-  }
+    @include link-colors(gray, black);
 
-  .social-media {
-    i {
-      font-size: 1.5em;
-      color: gray;
-      &:hover {
-        color: black;
-      }
-    }
-    a {
-      padding: 5px 0;
-    }
-  }
-  .lang {
-    margin-top: 13px;
-    float: right;
-    a {
-      color: gray;
-      font-size: 0.8em;
-    }
-    .active {
+    &.active {
       color: black;
     }
   }
+
+  .social-media i {
+    font-size: 1.5em;
+  }
+
+  .lang {
+    margin-top: 13px;
+    float: right;
+    font-size: 0.8em;
+  }
+
   .adidas {
     float: right;
     margin-right: 2em;
-
-    img {
-      margin-top: 0.5em;
-    }
   }
 }
 
@@ -569,6 +452,103 @@ footer {
   padding: 1em;
   width: 100%;
 }
+
+/*
+** =State
+************************/
+
+/*
+** =Theme
+************************/
+
+@include border-box-sizing;
+
+.main-nav {
+  float: right;
+  text-transform: uppercase;
+
+  ul {
+    display: inline;
+    visibility: hidden;
+    position: absolute;
+    padding: 0px;
+
+    a {
+      border: none;
+      text-align: left;
+    }
+
+    li{
+      float: none;
+    }
+  }
+
+  li {
+    float:left;
+
+    a {
+      height: $main-nav-height;
+      font-weight: bold;
+      padding: $main-nav-height / 5 0.1em;
+      margin-right: $main-nav-height;
+      display: block;
+      color: #333;
+      text-align: center;
+      position: relative;
+      background: rgba(255, 255, 255, 0.8);
+
+      &::before {
+        @extend .before;
+        border-bottom: $main-nav-height solid rgba(255, 255, 255, 0.8);
+        border-left: $main-nav-height solid transparent;
+        left: - $main-nav-height;
+      }
+
+      &::after {
+        @extend .after;
+        border-bottom: $main-nav-height solid transparent;
+        border-left: $main-nav-height solid rgba(255, 255, 255, 0.8);
+        right: - $main-nav-height;
+
+      }
+    }
+
+    &:hover, .active {
+      cursor: pointer;
+
+      a {
+        background: #ffffff;
+
+        &::before {
+          border-bottom-color: #ffffff;
+        }
+
+        &::after {
+          border-left-color: #ffffff;
+        }
+      }
+
+      ul {
+        visibility: visible;
+        margin-left: - $main-nav-height;
+
+        a::before, a::after {
+          border: none;
+        }
+
+        a {
+          padding-left: $main-nav-height / 5 + 0.2;
+          padding-right: $main-nav-height / 5 + 0.2;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.8);
+          }
+        }
+      }
+    }
+  }
+}
+
 
 @media all and (max-width: 72em) {
   main {
@@ -623,8 +603,7 @@ footer {
 
   [role="navigation"] {
     width: 95%;
-
-    position: absolute;
+    position: fixed;
     z-index: 1;
     top: 0;
     right: 0;
@@ -767,17 +746,3 @@ footer {
 
   }
 }
-
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
-}
-.clearfix { display: inline-block; }
-/* start commented backslash hack \*/
-* html .clearfix { height: 1%; }
-.clearfix { display: block; }
-/* close commented backslash hack */
