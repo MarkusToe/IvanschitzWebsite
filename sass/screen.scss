@@ -574,8 +574,38 @@ footer {
 
 }
 
-@media (max-width: 800px) {
-  html {
-    background: red;
+@media all and (max-width: 72em) {
+  .control {
+    display: block;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+  }
+
+  [role="navigation"] {
+    width: 75%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+  }
+
+  .main-nav {
+    float: none;
+
+    li {
+      float: none;
+
+      a:before, a:after {
+        display: none;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 35em) {
+  [role="navigation"] {
+    width: 75%;
   }
 }
