@@ -921,24 +921,26 @@ footer .adidas img {
     z-index: 1;
     top: 0;
     right: 0;
+    bottom: 0;
+    background: black;
   }
 
-  /* line 593, ../sass/screen.scss */
+  /* line 596, ../sass/screen.scss */
   .main-nav {
     float: none;
   }
-  /* line 596, ../sass/screen.scss */
+  /* line 599, ../sass/screen.scss */
   .main-nav li {
     float: none;
   }
-  /* line 599, ../sass/screen.scss */
+  /* line 602, ../sass/screen.scss */
   .main-nav li a:before, .main-nav li a:after {
     display: none;
     margin: 0;
   }
 }
 @media all and (max-width: 35em) {
-  /* line 608, ../sass/screen.scss */
+  /* line 611, ../sass/screen.scss */
   [role="navigation"] {
     width: 75%;
   }
