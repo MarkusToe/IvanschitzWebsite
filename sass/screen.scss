@@ -723,6 +723,9 @@ footer {
     right: 0;
 
     .social-media {
+      float: none;
+      margin-left: 0;
+
       i {
         font-size: 1.5em;
       }
