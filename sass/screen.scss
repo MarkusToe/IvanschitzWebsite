@@ -19,7 +19,7 @@ $susy: (
         math: fluid,
         output: float,
         debug: (
-                image: hide,
+                image: show,
                 toggle: top right,
         ),
 );
@@ -245,9 +245,9 @@ main {
   color: white;
 }
 
-/*section.news {
+section.news {
   display: none;
-}*/
+}
 
 .news_entry {
 
@@ -299,9 +299,9 @@ main {
   font-style: italic;
 }
 
-/*section.biography {
+section.biography {
   display: none;
-}*/
+}
 
 .biography_text {
   background: rgba(255, 255, 255, .5);
@@ -402,9 +402,9 @@ main {
   }
 }
 
-/*section.steckbrief {
+section.steckbrief {
   display: none;
-}*/
+}
 
 .steckbrief > div {
   padding: 1.5rem .5rem;
@@ -444,9 +444,9 @@ main {
   padding-left: gutter(8);
 }
 
-/*section.statistik {
-  display: none;
-}*/
+section.statistik {
+
+}
 
 .statistik {
   font-size: .875em;
@@ -454,7 +454,12 @@ main {
 
 .statistik > div {
   background: rgba(255, 255, 255, .5);
-  padding: gutter(8);
+  padding: 1.5rem 1rem;
+
+  @media (min-width: 800px) {
+    padding: gutter(8);
+  }
+
 }
 
 .statistik-table {
@@ -478,9 +483,9 @@ main {
   background: rgba(255, 255, 255, .5);
 }
 
-/*section.gallery {
+section.gallery {
   display: none;
-}*/
+}
 
 .gallery-list {
   margin: 0;
@@ -524,9 +529,9 @@ main {
   max-height: 100%;
 }
 
-/*section.charity {
+section.charity {
   display: none;
-}*/
+}
 
 .charity-header-img {
   display: none;
