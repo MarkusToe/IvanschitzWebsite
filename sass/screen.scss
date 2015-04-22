@@ -27,6 +27,7 @@ $susy: (
 
 $main-nav-height: 2.5em;
 $footer-width: 16em;
+$color-blue: #2E7691;
 
 /*
 ** =Base
@@ -606,6 +607,11 @@ section.charity {
   @include span(full);
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+
+  a {
+    color: $color-blue;
+    font-weight: bold;
+  }
 
   h2 {
     @media (min-width: 800px) {
