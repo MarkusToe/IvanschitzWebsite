@@ -1,0 +1,1221 @@
+/*
+Theme Name: Ivanschitz
+Theme URI: http://andreasivanschitz.com/
+Description: Ivanschitz WordPress theme
+Version: 1
+Author: Markus Török
+Author URI: ...
+*/
+
+/*
+HTML Boilerplate styles can be found in the html5-boilerplate/css directory.
+*/
+
+/* WordPress Required Styles */
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+
+.wp-caption-dd {
+	font-size: 11px;
+	line-height: 17px;
+	padding: 0 4px 5px;
+	margin: 0;
+}
+
+.sticky {
+	background: #f7f7f7;
+	padding: 0 10px 10px;
+}
+	
+.sticky h2 {
+	padding-top: 10px;
+}
+
+
+
+/* ----------
+
+	----
+		css include
+	----
+
+------------*/
+
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
+/* line 9, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_html5.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 29, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_html5.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* line 40, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_html5.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 47, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_html5.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/*! normalize.css v3.0.0 | Base | MIT License | git.io/normalize */
+/* line 11, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_base.scss */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 19, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_base.scss */
+body {
+  margin: 0;
+}
+
+/*! normalize.css v3.0.0 | Links | MIT License | git.io/normalize */
+/* line 9, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_links.scss */
+a {
+  background: transparent;
+}
+
+/* line 15, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_links.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/*! normalize.css v3.0.0 | Typography | MIT License | git.io/normalize */
+/* line 9, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_typography.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 15, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_typography.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 22, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_typography.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 29, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_typography.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 36, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_typography.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 43, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_typography.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 49, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_typography.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 57, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_typography.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 61, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_typography.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/*! normalize.css v3.0.0 | Embedded Content | MIT License | git.io/normalize */
+/* line 9, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_embeds.scss */
+img {
+  border: 0;
+}
+
+/* line 15, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_embeds.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/*! normalize.css v3.0.0 | Figures | MIT License | git.io/normalize */
+/* line 9, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_groups.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/* line 15, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_groups.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* line 23, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_groups.scss */
+pre {
+  overflow: auto;
+}
+
+/* line 29, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_groups.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/*! normalize.css v3.0.0 | Forms | MIT License | git.io/normalize */
+/* line 15, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+/* line 27, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+button {
+  overflow: visible;
+}
+
+/* line 36, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 47, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 57, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/* line 64, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 73, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+input {
+  line-height: normal;
+}
+
+/* line 83, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 93, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/* line 102, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 113, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 120, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 129, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+legend {
+  border: 0;
+  padding: 0;
+}
+
+/* line 136, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 143, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_forms.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/*! normalize.css v3.0.0 | Tables | MIT License | git.io/normalize */
+/* line 9, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_tables.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 14, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-normalize-1.5/stylesheets/normalize/_tables.scss */
+td,
+th {
+  padding: 0;
+}
+
+/*
+Base Rules - https://smacss.com/book/type-base
+
+A Base rule is applied to an element using an element selector, a descendent selector, or a child selector, along with any pseudo-classes. It doesn’t include any class or ID selectors. It is defining the default styling for how that element should look in all occurrences on the page.
+*/
+/*
+Layout Rules - https://smacss.com/book/type-layout
+
+CSS, by its very nature, is used to lay elements out on the page. However, there is a distinction between layouts dictating the major and minor components of a page. The minor components—such as a callout, or login form, or a navigation item—sit within the scope of major components such as a header or footer. I refer to the minor components as Modules and will dive into those in the next section. The major components are referred to as Layout styles.
+
+Layout styles can also be divided into major and minor styles based on reuse. Major layout styles such as header and footer are traditionally styled using ID selectors but take the time to think about the elements that are common across all components of the page and use class selectors where appropriate.
+*/
+/*
+Module Rules - https://smacss.com/book/type-module
+
+As briefly mentioned in the previous section, a Module is a more discrete component of the page. It is your navigation bars and your carousels and your dialogs and your widgets and so on. This is the meat of the page. Modules sit inside Layout components. Modules can sometimes sit within other Modules, too. Each Module should be designed to exist as a standalone component. In doing so, the page will be more flexible. If done right, Modules can easily be moved to different parts of the layout without breaking.
+
+When defining the rule set for a module, avoid using IDs and element selectors, sticking only to class names. A module will likely contain a number of elements and there is likely to be a desire to use descendent or child selectors to target those elements.
+*/
+/*
+State Rules - https://smacss.com/book/type-state
+
+A state is something that augments and overrides all other styles. For example, an accordion section may be in a collapsed or expanded state. A message may be in a success or error state.
+
+States are generally applied to the same element as a layout rule or applied to the same element as a base module class.
+*/
+/*
+** =Base
+************************/
+/* line 33, ../sass/screen.scss */
+body {
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+  background-attachment: fixed !important;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover !important;
+}
+
+/* line 44, ../sass/screen.scss */
+html {
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1.5;
+  background: #577685;
+}
+@media (min-width: 800px) {
+  /* line 44, ../sass/screen.scss */
+  html {
+    background: red;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 44, ../sass/screen.scss */
+  html {
+    background: orange;
+  }
+}
+
+/* line 60, ../sass/screen.scss */
+ul {
+  list-style-type: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 67, ../sass/screen.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 71, ../sass/screen.scss */
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* line 75, ../sass/screen.scss */
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+@media (min-width: 800px) {
+  /* line 75, ../sass/screen.scss */
+  main {
+    width: 66.10169%;
+    float: left;
+    margin-right: 1.69492%;
+    margin: 0 auto;
+    float: none;
+    margin-top: 4em;
+  }
+}
+
+/* line 87, ../sass/screen.scss */
+h1 {
+  margin: 0;
+}
+
+/* line 91, ../sass/screen.scss */
+h2 {
+  text-transform: uppercase;
+  background: #ffffff;
+  display: inline-block;
+  margin: 1em 0 1em 2em;
+  padding: .25em 1em;
+  /*margin-left: 2.5em;
+  margin-bottom: 1em;*/
+  position: relative;
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+/*
+** =Layout
+************************/
+/* line 115, ../sass/screen.scss */
+.news,
+.biography,
+.sportler,
+.steckbrief,
+.statistik
+main {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 124, ../sass/screen.scss */
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 12, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/*
+** =Module
+************************/
+/* line 142, ../sass/screen.scss */
+.before, h2::before, .main-nav li a::before {
+  content: "";
+  height: 0;
+  width: 0;
+  display: inline-block;
+  border-bottom: 2em solid #ffffff;
+  border-left: 2em solid transparent;
+  position: absolute;
+  left: -2em;
+  top: 0;
+}
+
+/* line 154, ../sass/screen.scss */
+.after, h2::after, .main-nav li a::after {
+  content: "";
+  height: 0;
+  width: 0;
+  display: inline-block;
+  border-bottom: 2em solid transparent;
+  border-left: 2em solid #ffffff;
+  position: absolute;
+  right: -2em;
+  top: 0;
+}
+
+/* line 166, ../sass/screen.scss */
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* line 170, ../sass/screen.scss */
+.logo {
+  background: url("../img/logo.png") 0 0 no-repeat;
+  background-size: 100%;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 25.42373%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* line 185, ../sass/screen.scss */
+[role="navigation"] {
+  position: fixed;
+  top: 1em;
+  right: 1.7em;
+  width: 70%;
+  font-size: 0.875rem;
+  padding: 0px;
+  margin: 0px;
+  min-height: 0;
+  background: transparent;
+}
+
+/* line 197, ../sass/screen.scss */
+.control {
+  display: none;
+  text-decoration: none;
+  color: black;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 4px 8px;
+  font-size: 1.3em;
+}
+
+/* line 208, ../sass/screen.scss */
+.news_entry time {
+  display: block;
+  margin: .75em 0;
+}
+@media (min-width: 800px) {
+  /* line 206, ../sass/screen.scss */
+  .news_entry {
+    width: 48.71795%;
+    float: left;
+    margin-right: 2.5641%;
+  }
+  /* line 216, ../sass/screen.scss */
+  .news_entry:nth-child(odd) {
+    margin-right: 0;
+    float: right;
+  }
+}
+
+/* line 223, ../sass/screen.scss */
+.news-text {
+  background: rgba(255, 255, 255, 0.5);
+  margin-bottom: 3em;
+}
+/* line 227, ../sass/screen.scss */
+.news-text > p {
+  padding: 0 1em;
+}
+/* line 231, ../sass/screen.scss */
+.news-text p:last-child {
+  padding-bottom: 1.5rem;
+}
+/* line 235, ../sass/screen.scss */
+.news-text header {
+  padding: .5em 1em;
+  background: #ffffff;
+}
+/* line 239, ../sass/screen.scss */
+.news-text header h3 {
+  margin: 0;
+  line-height: 1.5em;
+  font-weight: 400;
+}
+@media (min-width: 800px) {
+  /* line 223, ../sass/screen.scss */
+  .news-text {
+    width: 73.68421%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+/* line 251, ../sass/screen.scss */
+.news-summary {
+  margin: 1.5em 0;
+  font-style: italic;
+}
+
+/* line 256, ../sass/screen.scss */
+.biography_text {
+  width: 61.53846%;
+  float: right;
+  margin-right: 0;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 2.5641%;
+}
+
+/* line 263, ../sass/screen.scss */
+.biography h3 {
+  margin: 1em 0;
+}
+
+/* line 267, ../sass/screen.scss */
+.verein {
+  margin-bottom: 1em;
+}
+
+/* line 271, ../sass/screen.scss */
+.verein-date {
+  background: #ffffff;
+  margin-left: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  font-size: 0.875em;
+  position: relative;
+  display: inline-block;
+}
+
+/* line 281, ../sass/screen.scss */
+.verein-date::before {
+  content: "";
+  height: 0;
+  width: 0;
+  display: inline-block;
+  border-bottom: 1.5em solid #ffffff;
+  border-left: 1.5em solid transparent;
+  position: absolute;
+  left: -1.5em;
+}
+
+/* line 292, ../sass/screen.scss */
+.verein-date::after {
+  content: "";
+  height: 0;
+  width: 0;
+  display: inline-block;
+  border-bottom: 1.5em solid transparent;
+  border-left: 1.5em solid #ffffff;
+  position: absolute;
+  right: -1.5em;
+  top: 0;
+}
+
+/* line 304, ../sass/screen.scss */
+.verein-logo {
+  background: #ffffff;
+  width: 23.07692%;
+  padding: 2em;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: .75em;
+}
+
+/* line 313, ../sass/screen.scss */
+.verein-logo p {
+  font-style: italic;
+  margin: 0;
+}
+
+/* line 318, ../sass/screen.scss */
+.steckbrief > div {
+  padding: 2.5641%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* line 323, ../sass/screen.scss */
+.steckbrief-table td {
+  padding: .5em 0;
+}
+
+/* line 327, ../sass/screen.scss */
+.steckbrief-table p {
+  margin: 0;
+}
+
+/* line 331, ../sass/screen.scss */
+.steckbrief-table tr td:first-child {
+  width: 20.51282%;
+  text-align: right;
+  vertical-align: top;
+  text-transform: uppercase;
+  color: #939598;
+  font-weight: bold;
+}
+
+/* line 340, ../sass/screen.scss */
+.steckbrief-table tr td:last-child {
+  padding-left: 2.5641%;
+}
+
+/* line 344, ../sass/screen.scss */
+.statistik {
+  font-size: .875em;
+}
+
+/* line 348, ../sass/screen.scss */
+.statistik > div {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 2.5641%;
+}
+
+/* line 353, ../sass/screen.scss */
+.statistik-table {
+  width: 100%;
+}
+
+/* line 357, ../sass/screen.scss */
+.statistik-table th, .statistik-table td {
+  border-right: 1px solid #adadad;
+  padding: .5em 1em;
+}
+
+/* line 362, ../sass/screen.scss */
+.statistik-table td:last-child {
+  border: none;
+}
+
+/* line 366, ../sass/screen.scss */
+.statistik-table tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+/* line 370, ../sass/screen.scss */
+.statistik-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 374, ../sass/screen.scss */
+.gallery-list {
+  margin: 0;
+  padding: 2em 0;
+  padding-left: 12.82051%;
+  padding-right: 12.82051%;
+  overflow: hidden;
+  *zoom: 1;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* line 383, ../sass/screen.scss */
+.gallery-item {
+  width: 31.03448%;
+  height: 31.03448%;
+  background: #ffffff;
+  float: left;
+  margin-right: 3.44828%;
+  margin-bottom: 3.44828%;
+  padding: 1em;
+}
+/* line 390, ../sass/screen.scss */
+.gallery-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+/* line 396, ../sass/screen.scss */
+.gallery-item img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* line 401, ../sass/screen.scss */
+.charity article {
+  background: rgba(255, 255, 255, 0.5);
+  padding-left: 12.82051%;
+  padding-right: 12.82051%;
+  padding-bottom: 2em;
+}
+
+/* line 408, ../sass/screen.scss */
+.charity article h3 {
+  padding: 2em 0;
+  background: url("../img/article-header-bg.png") no-repeat left 50%;
+  padding-left: 48px;
+}
+
+/* line 414, ../sass/screen.scss */
+.charity article h4 {
+  padding: 1em 0;
+}
+
+/* line 418, ../sass/screen.scss */
+.charity article img {
+  float: left;
+  padding-right: 2.5641%;
+  padding-bottom: 1em;
+  width: 100%;
+  max-width: 33.59859%;
+}
+
+/* line 426, ../sass/screen.scss */
+.contact {
+  clear: both;
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  background: rgba(255, 255, 255, 0.5);
+  margin-top: 1em;
+}
+
+/* line 433, ../sass/screen.scss */
+.contact h2 {
+  margin-left: 16.94915%;
+}
+
+/* line 437, ../sass/screen.scss */
+.contact > div {
+  width: 66.10169%;
+  margin: 2.5641% auto;
+  padding: 2.5641%;
+  background: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  *zoom: 1;
+  margin-top: 0;
+}
+
+/* line 446, ../sass/screen.scss */
+.contact-management, .contact-interview {
+  width: 35.89744%;
+  float: left;
+  margin-right: 2.5641%;
+}
+
+/* line 450, ../sass/screen.scss */
+.contact-map {
+  width: 23.07692%;
+  float: right;
+  margin-right: 0;
+}
+
+/* line 454, ../sass/screen.scss */
+footer {
+  width: 100%;
+  height: auto;
+  border-top: .28125em solid black;
+  padding: .5625em 2em;
+  background: #ffffff;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 462, ../sass/screen.scss */
+footer a {
+  color: gray;
+}
+/* line 24, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/compass-core-1.0.3/stylesheets/compass/typography/links/_link-colors.scss */
+footer a:hover {
+  color: black;
+}
+/* line 465, ../sass/screen.scss */
+footer a.active {
+  color: black;
+}
+/* line 470, ../sass/screen.scss */
+footer .social-media {
+  float: right;
+  margin-left: 1em;
+}
+/* line 474, ../sass/screen.scss */
+footer .social-media li {
+  float: left;
+}
+/* line 478, ../sass/screen.scss */
+footer .social-media a {
+  margin-left: 15px;
+  padding: 0;
+}
+/* line 482, ../sass/screen.scss */
+footer .social-media a i {
+  line-height: 2em;
+}
+/* line 488, ../sass/screen.scss */
+footer .adidas {
+  float: left;
+}
+/* line 491, ../sass/screen.scss */
+footer .adidas img {
+  margin: 0;
+  display: block;
+  height: 36px;
+}
+/* line 498, ../sass/screen.scss */
+footer .lang {
+  float: right;
+  margin: 0;
+  line-height: 2em;
+}
+/* line 503, ../sass/screen.scss */
+footer .lang li {
+  float: right;
+}
+/* line 506, ../sass/screen.scss */
+footer .lang li a {
+  padding-left: .5em;
+  font-size: 1.2em;
+}
+@media (min-width: 800px) {
+  /* line 454, ../sass/screen.scss */
+  footer {
+    height: 100%;
+    background: url("../img/footer-edge.png") no-repeat right bottom;
+    background-size: 100%;
+    text-align: right;
+    width: 25.42373%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+  /* line 524, ../sass/screen.scss */
+  footer .social-media i {
+    font-size: 1.5em;
+  }
+  /* line 528, ../sass/screen.scss */
+  footer .social-media li {
+    float: none;
+  }
+  /* line 533, ../sass/screen.scss */
+  footer .lang {
+    margin-top: 13px;
+    float: right;
+    font-size: 0.8em;
+  }
+  /* line 539, ../sass/screen.scss */
+  footer .adidas {
+    float: right;
+    margin-right: 2em;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 454, ../sass/screen.scss */
+  footer {
+    width: 16.94915%;
+  }
+}
+
+/* line 550, ../sass/screen.scss */
+.footer-inner {
+  padding: 0;
+  position: relative;
+}
+@media (min-width: 800px) {
+  /* line 550, ../sass/screen.scss */
+  .footer-inner {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1em;
+    width: 100%;
+  }
+}
+
+/*
+** =State
+************************/
+/*
+** =Theme
+************************/
+/* line 21, ../../../../.rvm/gems/ruby-2.0.0-p481/gems/susy-2.2.2/sass/susy/language/susy/_box-sizing.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 573, ../sass/screen.scss */
+.main-nav {
+  float: right;
+  text-transform: uppercase;
+}
+/* line 577, ../sass/screen.scss */
+.main-nav ul {
+  display: inline;
+  visibility: hidden;
+  position: absolute;
+  padding: 0px;
+}
+/* line 583, ../sass/screen.scss */
+.main-nav ul a {
+  border: none;
+  text-align: left;
+}
+/* line 588, ../sass/screen.scss */
+.main-nav ul li {
+  float: none;
+}
+/* line 593, ../sass/screen.scss */
+.main-nav li {
+  float: left;
+}
+/* line 596, ../sass/screen.scss */
+.main-nav li a {
+  height: 2.5em;
+  font-weight: bold;
+  padding: 0.5em 0.1em;
+  margin-right: 2.5em;
+  display: block;
+  color: #333;
+  text-align: center;
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+}
+/* line 607, ../sass/screen.scss */
+.main-nav li a::before {
+  border-bottom: 2.5em solid rgba(255, 255, 255, 0.8);
+  border-left: 2.5em solid transparent;
+  left: -2.5em;
+}
+/* line 614, ../sass/screen.scss */
+.main-nav li a::after {
+  border-bottom: 2.5em solid transparent;
+  border-left: 2.5em solid rgba(255, 255, 255, 0.8);
+  right: -2.5em;
+}
+/* line 623, ../sass/screen.scss */
+.main-nav li:hover, .main-nav li .active {
+  cursor: pointer;
+}
+/* line 626, ../sass/screen.scss */
+.main-nav li:hover a, .main-nav li .active a {
+  background: #ffffff;
+}
+/* line 629, ../sass/screen.scss */
+.main-nav li:hover a::before, .main-nav li .active a::before {
+  border-bottom-color: #ffffff;
+}
+/* line 633, ../sass/screen.scss */
+.main-nav li:hover a::after, .main-nav li .active a::after {
+  border-left-color: #ffffff;
+}
+/* line 638, ../sass/screen.scss */
+.main-nav li:hover ul, .main-nav li .active ul {
+  visibility: visible;
+  margin-left: -2.5em;
+}
+/* line 642, ../sass/screen.scss */
+.main-nav li:hover ul a::before, .main-nav li:hover ul a::after, .main-nav li .active ul a::before, .main-nav li .active ul a::after {
+  border: none;
+}
+/* line 646, ../sass/screen.scss */
+.main-nav li:hover ul a, .main-nav li .active ul a {
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+}
+/* line 650, ../sass/screen.scss */
+.main-nav li:hover ul a:hover, .main-nav li .active ul a:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+@media all and (max-width: 72em) {
+  /* line 661, ../sass/screen.scss */
+  [role="navigation"] {
+    width: 100%;
+    right: 3em;
+  }
+
+  /* line 668, ../sass/screen.scss */
+  .main-nav li a {
+    margin-right: 0px;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  /* line 674, ../sass/screen.scss */
+  .main-nav li a:before, .main-nav li a:after {
+    display: none;
+    margin: 0;
+  }
+  /* line 679, ../sass/screen.scss */
+  .main-nav li:first-child a:before {
+    display: block;
+  }
+  /* line 684, ../sass/screen.scss */
+  .main-nav li:last-child a:after {
+    display: block;
+  }
+  /* line 688, ../sass/screen.scss */
+  .main-nav li:hover ul {
+    margin-left: 0;
+  }
+}
+@media all and (max-width: 50em) {
+  /* line 696, ../sass/screen.scss */
+  .control {
+    display: block;
+    position: fixed;
+    top: 1em;
+    right: 1em;
+  }
+
+  /* line 703, ../sass/screen.scss */
+  [role="navigation"] {
+    width: 95%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    margin-right: -95%;
+    bottom: 0;
+    height: 100%;
+    background: black;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -ms-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
+    box-shadow: 1px 10px 4px 6px rgba(0, 0, 0, 0.25);
+  }
+
+  /* line 721, ../sass/screen.scss */
+  .active-nav [role="navigation"] {
+    margin-right: 0;
+  }
+
+  /* line 725, ../sass/screen.scss */
+  .main-nav {
+    float: none;
+    padding: 0;
+    margin-top: 1em;
+  }
+  /* line 730, ../sass/screen.scss */
+  .main-nav ul {
+    display: block;
+    visibility: visible;
+    position: relative;
+    margin: 0;
+  }
+  /* line 736, ../sass/screen.scss */
+  .main-nav ul a {
+    text-align: center;
+    font-size: .875em;
+    font-weight: 100;
+  }
+  /* line 741, ../sass/screen.scss */
+  .main-nav ul a:hover {
+    color: #dddddd;
+  }
+  /* line 747, ../sass/screen.scss */
+  .main-nav > li {
+    padding: 1em 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  /* line 752, ../sass/screen.scss */
+  .main-nav > li:last-child {
+    border-bottom: none;
+  }
+  /* line 756, ../sass/screen.scss */
+  .main-nav li {
+    float: none;
+    background: transparent;
+  }
+  /* line 760, ../sass/screen.scss */
+  .main-nav li:hover {
+    background: transparent;
+  }
+  /* line 763, ../sass/screen.scss */
+  .main-nav li:hover a, .main-nav li:hover ul a:hover {
+    background: transparent;
+  }
+  /* line 768, ../sass/screen.scss */
+  .main-nav li a {
+    background: transparent;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  /* line 775, ../sass/screen.scss */
+  .main-nav li a:hover {
+    background: transparent;
+  }
+  /* line 780, ../sass/screen.scss */
+  .main-nav li a:before, .main-nav li a:after {
+    display: none;
+    margin: 0;
+  }
+  /* line 788, ../sass/screen.scss */
+  .main-nav li:first-child a:before, .main-nav li:first-child a:after, .main-nav li:last-child a:before, .main-nav li:last-child a:after {
+    display: none !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
