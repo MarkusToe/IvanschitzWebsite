@@ -452,7 +452,6 @@ section.statistik {
   width: 100%;
   overflow-y: auto;
   _overflow: auto;
-  margin: 0 0 1em;
 }
 .table-container::-webkit-scrollbar {
   -webkit-appearance: none;
@@ -468,9 +467,8 @@ section.statistik {
 .table-container-fade {
   position: absolute;
   right: 0;
-  bottom: 3em;
   width: 2em;
-  height: 75%;
+  height: 100%;
   background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(153,153,153,1) 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(153,153,153,1))); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(153,153,153,1) 100%); /* Chrome10+,Safari5.1+ */
@@ -490,8 +488,8 @@ section.statistik {
 }
 
 .statistik .table-container {
-  background: rgba(255, 255, 255, .5);
-  padding: 1.5rem 1rem;
+  //background: rgba(255, 255, 255, .5);
+  //padding: 1.5rem 1rem;
 
   @media (min-width: 800px) {
     padding: gutter(8);
