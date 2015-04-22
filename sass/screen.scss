@@ -73,6 +73,10 @@ p {
   margin-bottom: 1.5rem;
 }
 
+img {
+  max-width: 100%;
+}
+
 main {
   width: 90%;
   margin: 0 auto;
@@ -241,9 +245,9 @@ main {
   color: white;
 }
 
-section.news {
+/*section.news {
   display: none;
-}
+}*/
 
 .news_entry {
 
@@ -295,9 +299,9 @@ section.news {
   font-style: italic;
 }
 
-section.biography {
+/*section.biography {
   display: none;
-}
+}*/
 
 .biography_text {
   background: rgba(255, 255, 255, .5);
@@ -398,9 +402,9 @@ section.biography {
   }
 }
 
-section.steckbrief {
+/*section.steckbrief {
   display: none;
-}
+}*/
 
 .steckbrief > div {
   padding: 1.5rem .5rem;
@@ -440,9 +444,9 @@ section.steckbrief {
   padding-left: gutter(8);
 }
 
-section.statistik {
+/*section.statistik {
   display: none;
-}
+}*/
 
 .statistik {
   font-size: .875em;
@@ -473,6 +477,10 @@ section.statistik {
 .statistik-table tr:nth-child(even) {
   background: rgba(255, 255, 255, .5);
 }
+
+/*section.gallery {
+  display: none;
+}*/
 
 .gallery-list {
   margin: 0;
@@ -516,57 +524,88 @@ section.statistik {
   max-height: 100%;
 }
 
+/*section.charity {
+  display: none;
+}*/
+
+.charity-header-img {
+  display: none;
+}
+
 .charity article {
   background: rgba(255, 255, 255, .5);
-  padding-left: gutter(8) + span(1 of 8);
-  padding-right: gutter(8) + span(1 of 8);
-  padding-bottom: 2em;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  @media (min-width: 800px) {
+    padding-left: gutter(8) + span(1 of 8);
+    padding-right: gutter(8) + span(1 of 8);
+    padding-bottom: 2em;
+  }
+
 }
 
 .charity article h3 {
-  padding: 2em 0;
+  margin: 0 0 1.5rem;
   background: url("../img/article-header-bg.png") no-repeat left 50%;
   padding-left: 48px;
 }
 
-.charity article h4 {
-  padding: 1em 0;
-}
-
 .charity article img {
   float: left;
-  padding-right: gutter(8);
-  padding-bottom: 1em;
-  width: 100%;
-  max-width: span(2 of 6) + gutter(8);
+  padding: 0 1em 1em 0;
+  max-width: 50%;
+
+  @media (min-width: 800px) {
+    max-width: span(2 of 6) + gutter(8);
+    padding-right: gutter(8);
+  }
 }
 
 .contact{
   clear: both;
   @include span(full);
-  background: rgba(255, 255, 255, .5);
-  margin-top: 1em;
-}
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 
-.contact h2 {
-  margin-left: span(2 of 12) + gutter(12);
-}
+  h2 {
+    @media (min-width: 800px) {
+      margin-left: span(2 of 12) + gutter(12);
+    }
+  }
 
-.contact > div {
-  width: span(8);
-  margin: gutter(8) auto;
-  padding: gutter(8);
-  background: rgba(255, 255, 255, .5);
-  @include clearfix;
-  margin-top: 0;
+  h3 {
+    margin: 1rem 0 .5rem;
+  }
+
+  & > div {
+    background: rgba(255, 255, 255, .5);
+    @include clearfix;
+    padding: 1.5rem;
+
+    @media (min-width: 800px) {
+      width: span(8);
+      margin: gutter(8) auto;
+      padding: gutter(8);
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: 800px) {
+    background: rgba(255, 255, 255, .5);
+  }
 }
 
 .contact-management, .contact-interview {
-  @include span(3 of 8);
+  @media (min-width: 800px) {
+    @include span(3 of 8);
+  }
 }
 
 .contact-map {
-  @include span(2 of 8 last);
+  @media (min-width: 800px) {
+    @include span(2 of 8 last);
+  }
 }
 
 footer {
