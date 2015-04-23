@@ -34,13 +34,6 @@ $color-blue: #2E7691;
 ************************/
 body {
   overflow-x: hidden;
-  background-repeat: no-repeat;
-  background-attachment: fixed !important;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover !important;
 }
 
 html {
@@ -78,7 +71,20 @@ img {
   max-width: 100%;
 }
 
-main {
+section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 5%;
+  background-repeat: no-repeat;
+  background-attachment: fixed !important;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover !important;
+}
+
+/*main {
   width: 90%;
   margin: 0 auto;
 
@@ -88,7 +94,7 @@ main {
     float: none;
     margin-top: 4em;
   }
-}
+}*/
 
 h1 {
   margin: 0;
