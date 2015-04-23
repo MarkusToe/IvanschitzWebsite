@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="css/typography.css"/>
     <link rel="stylesheet" href="stylesheets/screen.css"/>
 </head>
-<body style="background-image: url(./img/bg/grass.jpg)">
+<body>
 <div class="container">
     <header class="page-header">
         <h1 class="logo">Andreas Ivanschitz</h1>
     </header>
 
     <main role="main" id="top">
-        <section class="news">
+        <section class="news" style="background-image: url(./img/bg/grass.jpg)">
             <h2>News</h2>
             <div class="news-entries">
                 <article class="news_entry">
@@ -105,7 +105,7 @@
         </section>
         <!-- !news -->
 
-        <section class="biography">
+        <section id="biography" class="biography" style="background-image: url(./img/bg/Long_Background.jpg)">
             <h2>Biographie</h2>
 
             <div>
@@ -172,7 +172,7 @@
         <!--!biography-->
 
 
-        <section class="sportler">
+        <section id="sportler" class="sportler" style="background-image: url(./img/bg/Gallery.jpg)">
             <h2>Der Sportler</h2>
             <section class="vereine">
                 <h3>Vereine</h3>
@@ -446,7 +446,7 @@
         </section>
         <!--!sportler-->
 
-        <section class="gallery">
+        <section id="gallery" class="gallery" style="background-image: url(./img/bg/Long_Background.jpg)">
             <h2>Galerie</h2>
             <ul class="gallery-list">
                 <li class="gallery-item"><img src="img/ivanschitz_weiss468x345.jpg" alt=""/></li>
@@ -553,7 +553,7 @@
         </section>
         <!--!gallery-->
 
-        <section class="charity">
+        <section id="charity" class="charity" style="background-image: url(./img/bg/Charity.jpg)">
             <h2>Charity</h2>
             <img src="img/soziales-header.png" alt="" class="charity-header-img"/>
             <article>
@@ -572,7 +572,7 @@
         </section>
         <!--!charity-->
 
-        <section class="contact">
+        <section id="contact" class="contact">
             <h2>Kontakt</h2>
             <div>
                 <h3>Personal Contact</h3>
@@ -627,20 +627,23 @@
 
     <nav role="navigation" id="menu">
         <ul class="main-nav">
+
+
+
             <li><a href="#">Home</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Biographie</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#biography">Biographie</a></li>
             <li>
-                <a href="#">Der Sportler</a>
+                <a href="#sportler">Der Sportler</a>
                 <ul>
                     <li><a href="#">Vereine</a></li>
                     <li><a href="#">Steckbrief</a></li>
                     <li><a href="#">Einsatzstatistik</a></li>
                 </ul>
             </li>
-            <li><a href="#">Galerie</a></li>
-            <li><a href="#">Soziales</a></li>
-            <li><a href="#">Kontakt</a></li>
+            <li><a href="#gallery">Galerie</a></li>
+            <li><a href="#charity">Soziales</a></li>
+            <li><a href="#contact">Kontakt</a></li>
         </ul>
 
         <a href="#top" class="control"><i class="fa fa-bars"></i></a>
