@@ -161,6 +161,12 @@ main {
   background: white;
   padding: .75em 1em;
   border-bottom: 1px solid #efefef;
+
+  @media (min-width: 800px) {
+    background: none;
+    border-bottom: none;
+    padding: 0;
+  }
 }
 
 /*
@@ -213,18 +219,6 @@ main {
     z-index: 10;
     pointer-events: none;
   }
-}
-
-[role="navigation"] {
-  position: fixed;
-  top: 1em;
-  right: 1.7em;
-  width: 70%;
-  font-size: 0.875rem;
-  padding: 0px;
-  margin: 0px;
-  min-height: 0;
-  background: transparent;
 }
 
 .control {
@@ -721,6 +715,7 @@ footer {
     position: fixed;
     bottom: 0;
     right: 0;
+    border-top: none;
 
     .social-media {
       float: none;
@@ -792,7 +787,20 @@ footer {
   transition: all .25s;
   box-shadow: 1px 10px 4px 6px rgba(0, 0, 0, 0.25);
 
-  @media (min-width: 1200em) {
+  @media (min-width: 800px) {
+    position: fixed;
+    top: 1em;
+    right: 1.7em;
+    width: 70%;
+    font-size: 0.875rem;
+    padding: 0px;
+    margin: 0px;
+    min-height: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  @media (min-width: 1200px) {
     [role="navigation"] {
       width: 100%;
       right: 3em;
@@ -840,29 +848,104 @@ footer {
   }
 
   @media (min-width: 800px) {
-    li {
-      a {
-        margin-right: 0px;
-        padding-right: 5px;
-        padding-left: 5px;
+    margin-top: 0;
 
+    a {
+      font-size: 1em;
+      font-weight: bold;
+      text-align: center;
+      color: #333;
+      background: rgba(255, 255, 255, 0.8);
+      height: $main-nav-height;
+      padding: $main-nav-height / 5 0.1em;
+
+      padding-right: 5px;
+      padding-left: 5px;
+      display: block;
+      position: relative;
+
+      &:hover, .active {
+        cursor: pointer;
+        background: #ffffff;
+
+        &:before {
+          border-bottom-color: #ffffff;
+        }
+
+        &:after {
+          border-left-color: #ffffff;
+        }
       }
-      a:before, a:after {
-        display: none;
-        margin: 0;
+    }
+
+    li {
+      float: left;
+      border-bottom: none;
+
+      ul {
+        visibility: hidden;
+        margin-left: - $main-nav-height;
+
+        a {
+          padding-left: $main-nav-height / 5 + 0.2;
+          padding-right: $main-nav-height / 5 + 0.2;
+          background: #ffffff;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.8);
+          }
+        }
+
+        li {
+          float: none;
+        }
       }
+
+      &:hover {
+        ul {
+          visibility: visible;
+        }
+      }
+    }
+
+    li {
+      &:hover ul {
+        margin-left: 0;
+      }
+    }
+
+    > li {
       &:first-child {
         a:before {
-          display: block;
+          content: "";
+          height: 0;
+          width: 0;
+          display: inline-block;
+          border-bottom: 2em solid #ffffff;
+          border-left: 2em solid transparent;
+          position: absolute;
+          left: -2em;
+          top: 0;
+          border-bottom: $main-nav-height solid rgba(255, 255, 255, 0.8);
+          border-left: $main-nav-height solid transparent;
+          left: - $main-nav-height;
         }
       }
       &:last-child {
         a:after {
-          display: block;
+          content: "";
+          height: 0;
+          width: 0;
+          display: inline-block;
+          border-bottom: 2em solid transparent;
+          border-left: 2em solid #ffffff;
+          position: absolute;
+          right: -2em;
+          top: 0;
+          border-bottom: $main-nav-height solid transparent;
+          border-left: $main-nav-height solid rgba(255, 255, 255, 0.8);
+          right: - $main-nav-height;
         }
-      }
-      &:hover ul {
-        margin-left: 0;
       }
     }
   }
@@ -870,6 +953,11 @@ footer {
   @media (min-width: 1200px) {
     float: right;
     text-transform: uppercase;
+
+    a {
+      padding: $main-nav-height / 5 0.1em;
+      margin-right: $main-nav-height;
+    }
 
     ul {
       display: inline;
@@ -889,6 +977,7 @@ footer {
 
     li {
       float: left;
+      border-bottom: none;
 
       a {
         height: $main-nav-height;
@@ -929,41 +1018,6 @@ footer {
           border-bottom: $main-nav-height solid transparent;
           border-left: $main-nav-height solid rgba(255, 255, 255, 0.8);
           right: - $main-nav-height;
-
-        }
-      }
-
-      &:hover, .active {
-        cursor: pointer;
-
-        a {
-          background: #ffffff;
-
-          &::before {
-            border-bottom-color: #ffffff;
-          }
-
-          &::after {
-            border-left-color: #ffffff;
-          }
-        }
-
-        ul {
-          visibility: visible;
-          margin-left: - $main-nav-height;
-
-          a::before, a::after {
-            border: none;
-          }
-
-          a {
-            padding-left: $main-nav-height / 5 + 0.2;
-            padding-right: $main-nav-height / 5 + 0.2;
-
-            &:hover {
-              background: rgba(255, 255, 255, 0.8);
-            }
-          }
         }
       }
     }
