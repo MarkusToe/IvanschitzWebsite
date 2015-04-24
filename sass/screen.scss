@@ -86,6 +86,13 @@ section {
   margin: 0 auto;
 
   @media (min-width: 800px) {
+    @include span(6 of 8);
+    margin: 0 auto;
+    float: none;
+    margin-top: 4em;
+  }
+
+  @media (min-width: 1200px) {
     @include span(8);
     margin: 0 auto;
     float: none;
@@ -526,7 +533,12 @@ section.gallery {
   background: rgba(255, 255, 255, .5);
 
   @media (min-width: 800px) {
-    padding: 2em 0;
+    padding: 1.5rem 0;
+    padding-left: gutter(6);
+    padding-right: gutter(6);
+  }
+  
+  @media (min-width: 1200px) {
     padding-left: span(1 of 8) + gutter(8);
     padding-right: span(1 of 8) + gutter(8);
   }
@@ -549,6 +561,10 @@ section.gallery {
     height: span(2 of 6 );
     margin-right: gutter(6);
     margin-bottom: gutter(6);
+
+    &:nth-child(2n) {
+      margin-right: gutter(6);
+    }
 
     &:nth-child(3n) {
       margin-right: 0;
