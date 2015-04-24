@@ -537,7 +537,7 @@ section.gallery {
     padding-left: gutter(6);
     padding-right: gutter(6);
   }
-  
+
   @media (min-width: 1200px) {
     padding-left: span(1 of 8) + gutter(8);
     padding-right: span(1 of 8) + gutter(8);
@@ -809,7 +809,7 @@ footer {
   @media (min-width: 800px) {
     position: fixed;
     top: 1em;
-    right: 1.7em;
+    right: 3em;
     width: 70%;
     font-size: 0.875rem;
     padding: 0px;
@@ -822,7 +822,6 @@ footer {
   @media (min-width: 1200px) {
     [role="navigation"] {
       width: 100%;
-      right: 3em;
     }
   }
 }
@@ -868,6 +867,8 @@ footer {
 
   @media (min-width: 800px) {
     margin-top: 0;
+    float: right;
+    text-transform: uppercase;
 
     a {
       font-size: 1em;
@@ -877,7 +878,6 @@ footer {
       background: rgba(255, 255, 255, 0.8);
       height: $main-nav-height;
       padding: $main-nav-height / 5 0.1em;
-
       padding-right: 5px;
       padding-left: 5px;
       display: block;
@@ -886,13 +886,45 @@ footer {
       &:hover, .active {
         cursor: pointer;
         background: #ffffff;
+      }
+    }
 
-        &:before {
-          border-bottom-color: #ffffff;
+    > li {
+      &:first-child a:before,
+      &:last-child a:after {
+        content: "";
+        height: 0;
+        width: 0;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+      }
+
+      &:first-child {
+        a:before {
+          border-bottom: $main-nav-height solid rgba(255, 255, 255, 0.8);
+          border-left: $main-nav-height solid transparent;
+          left: - $main-nav-height;
         }
 
-        &:after {
-          border-left-color: #ffffff;
+        &:hover {
+          a:before {
+            border-bottom-color: #ffffff;
+          }
+        }
+      }
+
+      &:last-child {
+        a:after {
+          border-bottom: $main-nav-height solid transparent;
+          border-left: $main-nav-height solid rgba(255, 255, 255, 0.8);
+          right: - $main-nav-height;
+        }
+
+        &:hover {
+          a:after {
+            border-left-color: #ffffff;
+          }
         }
       }
     }
@@ -901,10 +933,12 @@ footer {
       float: left;
       border-bottom: none;
 
-
       ul {
         visibility: hidden;
-        margin-left: - $main-nav-height;
+
+        li {
+          float: none;
+        }
 
         a {
           padding-left: $main-nav-height / 5 + 0.2;
@@ -915,10 +949,6 @@ footer {
             background: rgba(255, 255, 255, 0.8);
           }
         }
-
-        li {
-          float: none;
-        }
       }
 
       &:hover {
@@ -927,119 +957,62 @@ footer {
         }
       }
     }
-
-    li {
-      &:hover ul {
-        margin-left: 0;
-      }
-    }
-
-    > li {
-      &:first-child {
-        a:before {
-          content: "";
-          height: 0;
-          width: 0;
-          display: inline-block;
-          border-bottom: 2em solid #ffffff;
-          border-left: 2em solid transparent;
-          position: absolute;
-          left: -2em;
-          top: 0;
-          border-bottom: $main-nav-height solid rgba(255, 255, 255, 0.8);
-          border-left: $main-nav-height solid transparent;
-          left: - $main-nav-height;
-        }
-      }
-      &:last-child {
-        a:after {
-          content: "";
-          height: 0;
-          width: 0;
-          display: inline-block;
-          border-bottom: 2em solid transparent;
-          border-left: 2em solid #ffffff;
-          position: absolute;
-          right: -2em;
-          top: 0;
-          border-bottom: $main-nav-height solid transparent;
-          border-left: $main-nav-height solid rgba(255, 255, 255, 0.8);
-          right: - $main-nav-height;
-        }
-      }
-    }
   }
 
   @media (min-width: 1200px) {
-    float: right;
-    text-transform: uppercase;
-
     a {
       padding: $main-nav-height / 5 0.1em;
       margin-right: $main-nav-height;
     }
 
-    ul {
-      display: inline;
-      visibility: hidden;
-      position: absolute;
-      padding: 0px;
-
-      a {
-        border: none;
-        text-align: left;
+    > li {
+      a:before,
+      a:after {
+        content: "";
+        height: 0;
+        width: 0;
+        display: inline-block;
+        position: absolute;
+        top: 0;
       }
 
-      li {
-        float: none;
+      a:before {
+        border-bottom: $main-nav-height solid rgba(255, 255, 255, 0.8);
+        border-left: $main-nav-height solid transparent;
+        left: - $main-nav-height;
+      }
+
+      &:hover {
+        a:before {
+          border-bottom-color: #ffffff;
+        }
+      }
+
+      a:after {
+        border-bottom: $main-nav-height solid transparent;
+        border-left: $main-nav-height solid rgba(255, 255, 255, 0.8);
+        right: - $main-nav-height;
+      }
+
+      &:hover {
+        a:after {
+          border-left-color: #ffffff;
+        }
+      }
+
+      ul {
+        a:before {
+          display: none;
+        }
+
+        a:after {
+          display: none;
+        }
       }
     }
 
-    li {
-      float: left;
-      border-bottom: none;
-
-      a {
-        height: $main-nav-height;
-        font-weight: bold;
-        padding: $main-nav-height / 5 0.1em;
-        margin-right: $main-nav-height;
-        display: block;
-        color: #333;
-        text-align: center;
-        position: relative;
-        background: rgba(255, 255, 255, 0.8);
-
-        &:before {
-          content: "";
-          height: 0;
-          width: 0;
-          display: inline-block;
-          border-bottom: 2em solid #ffffff;
-          border-left: 2em solid transparent;
-          position: absolute;
-          left: -2em;
-          top: 0;
-          border-bottom: $main-nav-height solid rgba(255, 255, 255, 0.8);
-          border-left: $main-nav-height solid transparent;
-          left: - $main-nav-height;
-        }
-
-        &:after {
-          content: "";
-          height: 0;
-          width: 0;
-          display: inline-block;
-          border-bottom: 2em solid transparent;
-          border-left: 2em solid #ffffff;
-          position: absolute;
-          right: -2em;
-          top: 0;
-          border-bottom: $main-nav-height solid transparent;
-          border-left: $main-nav-height solid rgba(255, 255, 255, 0.8);
-          right: - $main-nav-height;
-        }
-      }
+    ul {
+      margin-left: - $main-nav-height;
     }
   }
 }
