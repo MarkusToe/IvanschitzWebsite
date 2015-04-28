@@ -19,7 +19,7 @@ $susy: (
         math: fluid,
         output: float,
         debug: (
-                image: hide,
+                image: show,
                 toggle: top right,
         ),
 );
@@ -80,6 +80,7 @@ section {
   -o-background-size: cover;
   background-size: cover !important;
   padding: 4rem 0;
+  min-height: 100vh;
 }
 
 .wrapper {
@@ -317,24 +318,113 @@ section.news {
 }
 
 section.biography {
+  position: relative;
 
+  .wrapper {
+    @media (min-width: 1200px) {
+      @include span(10);
+      margin: 0 auto;
+      float: none;
+    }
+  }
 }
 
 .biography_text {
   background: rgba(255, 255, 255, .5);
   padding: 1.5em;
-
+  max-height: 30em;
+  overflow: scroll;
+  
   @media (min-width: 800px) {
-    @include span(5 of 8 last);
-    padding: gutter(8);
+    @include span(3 of 6 last);
   }
 
+  @media (min-width: 1200px) {
+    @include span(5 of 10 last);
+    padding: gutter(8);
+  }
+}
+
+.biograhpy-andy {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-height: 95vh;
+  display: none;
+
+  @media (min-width: 800px) {
+    display: block;
+    margin-left: span(1 of 8) + gutter(8);
+    max-width: span(3 of 8) + gutter(8);
+  }
+
+  @media (min-width: 1200px) {
+    margin-left: span(1) + gutter(12);
+    max-width: span(4 of 10) + gutter(12);
+  }
+}
+
+.biography-download {
+  background: rgba(255, 255, 255, .5);
+  padding: 1.5em;
+
+  a {
+    text-transform: uppercase;
+    color: black;
+    background: white;
+    line-height: 1.5rem;
+    padding: .75rem;
+    position: relative;
+    display: inline-block;
+    margin-left: 3rem;
+
+    &:before {
+      content: "";
+      height: 0;
+      width: 0;
+      display: inline-block;
+      border-bottom: 3rem solid #ffffff;
+      border-left: 3rem solid transparent;
+      position: absolute;
+      left: -3rem;
+      top: 0;
+    }
+
+    &:after {
+      content: "";
+      height: 0;
+      width: 0;
+      display: inline-block;
+      border-bottom: 3rem solid transparent;
+      border-left: 3rem solid #ffffff;
+      position: absolute;
+      right: -3rem;
+      top: 0;
+    }
+  }
+
+  @media (min-width: 800px) {
+    @include span(3 of 6 last);
+    padding: gutter(8);
+    margin-left: 10%;
+  }
+
+  @media (min-width: 1200px) {
+    @include span(5 of 10 last);
+  }
 }
 
 .biography{
+  h2 {
+    display: none;
+  }
+
   h3 {
-    margin: .5rem 0 1rem 0;
+    padding: 1rem 0;
+    margin: .5rem 0;
     line-height: 1.5rem;
+    background: url("../img/article-header-bg.png") no-repeat left 30%;
+    padding-left: 48px;
   }
 
   h4 {
@@ -877,6 +967,7 @@ footer {
     min-height: 0;
     background: transparent;
     box-shadow: none;
+    max-height: 2em;
   }
 
   @media (min-width: 1200px) {
