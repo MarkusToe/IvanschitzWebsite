@@ -19,7 +19,7 @@ $susy: (
         math: fluid,
         output: float,
         debug: (
-                image: show,
+                image: hide,
                 toggle: top right,
         ),
 );
@@ -79,24 +79,24 @@ section {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover !important;
+  padding: 4rem 0;
 }
 
 .wrapper {
   width: 90%;
   margin: 0 auto;
+  @include clearfix;
 
   @media (min-width: 800px) {
     @include span(6 of 8);
     margin: 0 auto;
     float: none;
-    margin-top: 4em;
   }
 
   @media (min-width: 1200px) {
     @include span(8);
     margin: 0 auto;
     float: none;
-    margin-top: 4em;
   }
 }
 
@@ -259,6 +259,7 @@ section.news {
   time {
     display: block;
     margin: .75em 0;
+    font-weight: bold;
   }
 
   @media (min-width: 800px) {
@@ -267,6 +268,15 @@ section.news {
     &:nth-child(odd) {
       margin-right: 0;
       float: right;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    time {
+      float: left;
+      margin-top: 0;
+      background: url("../img/article-header-bg.png") no-repeat right 50%;
+      max-width: 5em;
     }
   }
 }
@@ -294,7 +304,9 @@ section.news {
     }
   }
 
-  @media (min-width: 800px) {
+
+
+  @media (min-width: 1200px) {
     @include span(3 of 4 last);
   }
 }
@@ -333,11 +345,15 @@ section.biography {
 }
 
 .vereine {
-
+  @include clearfix;
 }
 
 .verein {
   margin-bottom: 1em;
+
+  > div {
+    @include clearfix;
+  }
 }
 
 .verein-date {
@@ -383,6 +399,11 @@ section.biography {
   font-size: .75em;
 
   @media (min-width: 800px) {
+    width: span(2 of 6);
+    float: left;
+  }
+
+  @media (min-width: 1200px) {
     width: span(2 of 8);
   }
 }
@@ -403,6 +424,45 @@ section.biography {
 
     &:last-child {
       border: none;
+    }
+  }
+
+  @media (min-width: 800px) {
+    margin: 0;
+    margin-left: gutter(8);
+    float: left;
+    width: span(4 of 6);
+
+    li {
+      border-bottom: none;
+      max-width: span(2 of 4);
+      float: left;
+
+      &:first-child {
+        margin-right: gutter(4);
+      }
+    }
+
+    li:last-child {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    width: span(6 of 8);
+
+    li {
+      max-width: span(2 of 6);
+      margin-right: gutter(6);
+
+      &:first-child {
+        margin-right: gutter(6);
+      }
+
+      &:last-child {
+        display: block;
+        margin-right: 0;
+      }
     }
   }
 }
