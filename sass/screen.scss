@@ -333,7 +333,7 @@ section.biography {
   padding: 1.5em;
   max-height: 30em;
   overflow: scroll;
-  
+
   @media (min-width: 800px) {
     @include span(3 of 6 last);
   }
@@ -938,7 +938,7 @@ footer {
 
         a {
           i {
-              line-height: 1em;
+            line-height: 1em;
           }
         }
       }
@@ -1093,6 +1093,10 @@ footer {
         background: #ffffff;
       }
     }
+    ul a {
+      font-size: 0.75rem;
+      padding: 0;
+    }
 
     > li {
       &:first-child a:before,
@@ -1139,7 +1143,7 @@ footer {
       border-bottom: none;
 
       ul {
-        visibility: hidden;
+        display: none;
 
         li {
           float: none;
@@ -1158,7 +1162,10 @@ footer {
 
       &:hover {
         ul {
-          visibility: visible;
+          display: block;
+        }
+        a, .active {
+          background: #ffffff;
         }
       }
     }
@@ -1218,6 +1225,56 @@ footer {
 
     ul {
       margin-left: - $main-nav-height;
+
+      a {
+        font-size: 0.9rem;
+        padding: 0;
+      }
+    }
+  }
+}
+
+.triangle {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 1em solid white;
+    border-top: 1em solid transparent;
+    width: 0;
+  }
+  &:after {
+    content: '';
+    position: relative;
+    height: 10em;
+    position: absolute;
+
+  }
+
+  &.triangle-two-em {
+    margin-left: 2em;
+
+    &:before {
+      border-right-width: 2em;
+      border-top-width: 2em;
+      left: -2em;
+    }
+    &:after {
+      width: 2em;
+      top: 2em;
+      left: -2em;
+
+    }
+  }
+  &.triangle-white {
+    &:before {
+      border-right-color: red;
+    }
+    &:after {
+      background: red;
     }
   }
 }
