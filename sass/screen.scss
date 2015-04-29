@@ -975,3 +975,50 @@ footer {
     }
   }
 }
+
+
+
+.triangle {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 1em solid white;
+    border-top: 1em solid transparent;
+    width: 0;
+  }
+  &:after {
+    content: '';
+    position: relative;
+    height: 10em;
+    position: absolute;
+
+  }
+
+  &.triangle-two-em {
+    margin-left: 2em;
+
+    &:before {
+      border-right-width: 2em;
+      border-top-width: 2em;
+      left: -2em;
+    }
+    &:after {
+      width: 2em;
+      top: 2em;
+      left: -2em;
+
+    }
+  }
+  &.triangle-white {
+    &:before {
+      border-right-color: red;
+    }
+    &:after {
+      background: red;
+    }
+  }
+}
