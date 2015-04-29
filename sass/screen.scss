@@ -19,7 +19,7 @@ $susy: (
         math: fluid,
         output: float,
         debug: (
-                image: show,
+                image: hide,
                 toggle: top right,
         ),
 );
@@ -147,7 +147,6 @@ h4 {
 .news,
 .biography,
 .sportler,
-.steckbrief,
 .statistik
 main {
   @include clearfix;
@@ -434,6 +433,10 @@ section.biography {
   }
 }
 
+section#sportler {
+  padding: 0;
+}
+
 .vereine {
   @include clearfix;
 }
@@ -558,10 +561,11 @@ section.biography {
 }
 
 section.steckbrief {
-
+  position: relative;
+  overflow: visible;
 }
 
-.steckbrief > div {
+.steckbrief-table-wrap {
   padding: 1.5rem .5rem;
   background-color: rgba(255, 255, 255, .5);
 
@@ -570,33 +574,66 @@ section.steckbrief {
   }
 }
 
-.steckbrief-table td {
-  padding: .75rem 0;
+.steckbrief-andy {
+  position: fixed;
+  bottom: 0;
+  right: -9999px;
+  margin-right: span(1) + gutter(12);
+  max-height: 95vh;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  display: none;
 }
 
-.steckbrief-table p {
-  margin: 0;
-}
-
-.steckbrief-table tr td:first-child {
-  text-align: right;
-  vertical-align: top;
-  color: #333333;
-  font-weight: bold;
-  width: 33.3%;
-
-  &:after {
-    content: " /";
-  }
-
-  @media (min-width: 800px) {
-    width: span(2 of 8) - gutter(8);
-    text-transform: uppercase;
+.fixed-bg {
+  .steckbrief-andy {
+    right: 0;
   }
 }
 
-.steckbrief-table tr td:last-child {
-  padding-left: gutter(8);
+.steckbrief-table {
+  td {
+    padding: .75rem 0;
+  }
+
+  tr {
+    td:first-child {
+
+      text-align: right;
+      vertical-align: top;
+      color: #333333;
+      font-weight: bold;
+      width: 33.3%;
+
+      &:after {
+        content: " /";
+      }
+
+      @media (min-width: 800px) {
+        width: span(2 of 8) - gutter(8);
+        text-transform: uppercase;
+      }
+
+      @media (min-width: 1200px) {
+        width: span(2 of 5);
+      }
+    }
+
+    td:last-child {
+      padding-left: gutter(5);
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  @media (min-width: 1200px) {
+    width: span(5 of 8);
+  }
 }
 
 section.statistik {
