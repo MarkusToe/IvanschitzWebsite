@@ -333,7 +333,7 @@ section.biography {
   padding: 1.5em;
   max-height: 30em;
   overflow: scroll;
-  
+
   @media (min-width: 800px) {
     @include span(3 of 6 last);
   }
@@ -937,7 +937,7 @@ footer {
 
         a {
           i {
-              line-height: 1em;
+            line-height: 1em;
           }
         }
       }
