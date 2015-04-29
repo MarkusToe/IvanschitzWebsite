@@ -901,6 +901,7 @@ footer {
     float: right;
     margin: 0;
     line-height: 2em;
+    text-transform: uppercase;
 
     li {
       float: right;
@@ -933,6 +934,12 @@ footer {
 
       li {
         float: none;
+
+        a {
+          i {
+              line-height: 1em;
+          }
+        }
       }
     }
 
@@ -940,11 +947,20 @@ footer {
       margin-top: 13px;
       float: right;
       font-size: 0.8em;
+
+      li {
+        float: none;
+      }
     }
 
     .adidas {
       float: right;
       margin-right: 2em;
+      margin-top: 1em;
+
+      img {
+        height: 42px;
+      }
     }
   }
 
