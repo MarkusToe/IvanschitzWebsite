@@ -19,7 +19,7 @@ $susy: (
         math: fluid,
         output: float,
         debug: (
-                image: hide,
+                image: show,
                 toggle: top right,
         ),
 );
@@ -171,11 +171,21 @@ main {
   background: white;
   padding: .75em 1em;
   border-bottom: 1px solid #efefef;
+  text-align: center;
+
+  img {
+    width: 68px;
+    height: 72px;
+  }
 
   @media (min-width: 800px) {
     background: none;
     border-bottom: none;
     padding: 0;
+
+    img {
+      display: none;
+    }
   }
 }
 
@@ -217,6 +227,7 @@ main {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
+  display: none;
 
   @media (min-width: 800px) {
     background: url("../img/logo.png") 0 0 no-repeat;
@@ -228,13 +239,14 @@ main {
     left: 0;
     z-index: 10;
     pointer-events: none;
+    display: block;
   }
 }
 
 .control {
   display: block;
   position: fixed;
-  top: 0.35em;
+  top: 0.25em;
   right: 5%;
   text-decoration: none;
   color: black;
@@ -247,7 +259,11 @@ main {
 }
 
 .active-nav .control {
+  position: absolute;
+  left: -4rem;
+  background: black;
   color: white;
+  width: 4rem;
 }
 
 section.news {
@@ -591,7 +607,11 @@ section.steckbrief {
 
 .fixed-bg {
   .steckbrief-andy {
-    right: 0;
+    right: -9999px;
+
+    @media (min-width: 800px) {
+      right: 0;
+    }
   }
 }
 
@@ -645,6 +665,7 @@ section.statistik {
   width: 100%;
   overflow-y: auto;
   _overflow: auto;
+  background: rgba(255, 255, 255, .5);
 }
 .table-container::-webkit-scrollbar {
   -webkit-appearance: none;
@@ -814,32 +835,31 @@ section.charity {
     font-weight: bold;
   }
 
-  h2 {
-    @media (min-width: 800px) {
-      margin-left: span(2 of 12) + gutter(12);
-    }
-  }
-
   h3 {
     margin: 1rem 0 .5rem;
   }
 
   & > div {
-    background: rgba(255, 255, 255, .5);
-    @include clearfix;
-    padding: 1.5rem;
-
     @media (min-width: 800px) {
+      width: span(6 of 8);
+      margin: 0 auto;
+    }
+
+    @media (min-width: 1200px) {
       width: span(8);
-      margin: gutter(8) auto;
-      padding: gutter(8);
-      margin-top: 0;
     }
   }
 
   @media (min-width: 800px) {
-    background: rgba(255, 255, 255, .5);
+    margin-top: 0;
+    margin-bottom: 0;
   }
+}
+
+.contact-wrap {
+  background: rgba(255, 255, 255, .5);
+  @include clearfix;
+  padding: 1.5rem;
 }
 
 .contact-management, .contact-interview {
@@ -994,7 +1014,7 @@ footer {
 @include border-box-sizing;
 
 [role="navigation"] {
-  width: 95%;
+  width: 50%;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -1009,6 +1029,10 @@ footer {
   -o-transition: all .25s;
   transition: all .25s;
   box-shadow: 1px 10px 4px 6px rgba(0, 0, 0, 0.25);
+
+  @media (min-width: 500px) {
+    width: 33%;
+  }
 
   @media (min-width: 800px) {
     position: fixed;
@@ -1154,7 +1178,7 @@ footer {
           padding-right: $main-nav-height / 5 + 0.2;
           background: #ffffff;
           height: auto;
-          padding: .75rem 0;
+          padding: .5rem 0;
 
           &:hover {
             background: rgba(255, 255, 255, 0.8);
@@ -1166,6 +1190,7 @@ footer {
         ul {
           display: block;
         }
+
         a, .active {
           background: #ffffff;
         }
