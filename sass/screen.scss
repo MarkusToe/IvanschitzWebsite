@@ -271,6 +271,7 @@ section.news {
 }
 
 .news_entry {
+  margin-bottom: 3em;
 
   time {
     display: block;
@@ -278,12 +279,28 @@ section.news {
     font-weight: bold;
   }
 
+  .read-more {
+    display: block;
+    background: rgba(255, 255, 255, 0.5);
+    padding: .75rem 1em;
+    text-align: center;
+    color: black;
+    font-style: italic;
+    font-size: .875rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+
+    &:hover, &:active {
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+    }
+  }
+
   @media (min-width: 800px) {
     @include span(4 of 8);
 
-    &:nth-child(odd) {
+    &:nth-child(even) {
       margin-right: 0;
-      float: right;
     }
   }
 
@@ -299,7 +316,6 @@ section.news {
 
 .news-text {
   background: rgba(255, 255, 255, .5);
-  margin-bottom: 3em;
 
   & > p {
     padding: 0 1em;
