@@ -152,6 +152,12 @@ main {
   @include clearfix;
 }
 
+#news, #biography, #vereine,
+#statistik, #steckbrief, #gallery,
+#charity {
+  border-bottom: .75rem solid white;
+}
+
 .container {
   @include container;
   @include clearfix;
@@ -279,23 +285,6 @@ section.news {
     font-weight: bold;
   }
 
-  .read-more {
-    display: block;
-    background: rgba(255, 255, 255, 0.5);
-    padding: .75rem 1em;
-    text-align: center;
-    color: black;
-    font-style: italic;
-    font-size: .875rem;
-    line-height: 1.5rem;
-    font-weight: bold;
-
-    &:hover, &:active {
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
-    }
-  }
-
   @media (min-width: 800px) {
     @include span(4 of 8);
 
@@ -311,6 +300,29 @@ section.news {
       background: url("../img/article-header-bg.png") no-repeat right 50%;
       max-width: 5em;
     }
+  }
+}
+
+.read-more {
+  display: block;
+  background: rgba(255, 255, 255, 0.5);
+  padding: .75rem 1em;
+  text-align: center;
+  color: black;
+  font-style: italic;
+  font-size: .875rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+
+  &:hover, &:active {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+}
+
+.news-single {
+  .news-text {
+    @include span(full);
   }
 }
 
@@ -843,8 +855,7 @@ section.charity {
 .contact{
   clear: both;
   @include span(full);
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+
 
   a {
     color: $color-blue;
@@ -869,18 +880,25 @@ section.charity {
   @media (min-width: 800px) {
     margin-top: 0;
     margin-bottom: 0;
+    text-align: center;
   }
 }
 
 .contact-wrap {
-  background: rgba(255, 255, 255, .5);
+  background: rgba(255, 255, 255, .8);
   @include clearfix;
   padding: 1.5rem;
 }
 
-.contact-management, .contact-interview {
+.contact-management {
   @media (min-width: 800px) {
-    @include span(3 of 8);
+    @include span(4 of 8);
+  }
+}
+
+.contact-interview {
+  @media (min-width: 800px) {
+    @include span(4 of 8 last);
   }
 }
 
@@ -950,6 +968,12 @@ footer {
     }
   }
 
+  .impr {
+    float: right;
+    line-height: 2.2em;
+    margin-right: 1em;
+  }
+
   @media (min-width: 800px) {
     height: 100%;
     background: url("../img/footer-edge.png") no-repeat right bottom;
@@ -992,12 +1016,17 @@ footer {
 
     .adidas {
       float: right;
-      margin-right: 2em;
+      margin-right: 1em;
       margin-top: 1em;
 
       img {
         height: 42px;
       }
+    }
+
+    .impr {
+      margin-top: 2.5em;
+      line-height: normal;
     }
   }
 
