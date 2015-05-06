@@ -1,0 +1,57 @@
+//*-----
+//TYPOGRAPHY
+//*-----
+body,
+button,
+input,
+select,
+textarea {
+  color: $color__text-main;
+  font-family: $font__main;
+  @include font-size(1);
+  line-height: $font__line-height-body;
+  font-weight: 500;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  background: $color__background-body;
+  display: inline-block;
+  margin: 1.5rem 0 1.5rem 2em;
+  padding: .25em 1em;
+  position: relative;
+  font-size: 1em;
+  line-height: 1.5em;
+
+  &:before {
+    @include edge(2, 'before');
+  }
+
+  &:after {
+    @include edge(2, 'after');
+  }
+
+  @media (min-width: 800px) {
+    font-size: 1.5em;
+    margin: 1.5rem 0 3rem 2em;
+  }
+}
+
+h3 {
+  margin: .5rem 0 1rem 0;
+  line-height: 1.5rem;
+}
+
+h4 {
+  font-size: 1em;
+  line-height: 1.5rem;
+  margin: 2rem 0 1rem;
+}

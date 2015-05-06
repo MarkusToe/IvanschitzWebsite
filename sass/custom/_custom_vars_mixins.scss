@@ -1,0 +1,63 @@
+//**-----
+//STRUCTURE
+//**-----
+
+// Configuring Susy Defaults
+$susy: (
+        columns: 12,
+        gutters: 1/4,
+        math: fluid,
+        output: float,
+        debug: (
+                image: show,
+                toggle: top right,
+        ),
+);
+
+$phi: 1.618;
+
+$base_font_size: 16;
+$px: (1 / $base_font_size) * 1rem;
+
+$main-nav-height: 2.5em;
+$footer-width: 16em;
+
+//**-----
+//TYPOGRAPHY
+//**-----
+@import url("//fonts.googleapis.com/css?family=Raleway:300,400,500,700,900");
+
+// DEFAULT _S "TYPOGRAPHY" VARS
+$font__main: Raleway, "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: $phi*1em;
+$font__line-height-pre: $phi*1em;
+
+//**-----
+//COLORS
+//**-----
+$color__background-body: #fff;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #e6e6e6;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+$color__background-transparent:rgba(255, 255, 255, 0.8);
+
+$color__text-main: #2a3333;
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__link: #999;
+$color__link-visited: #666;
+$color__link-hover: #666;
+
+$color__button-hover: #1a1a1a;
+
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #ccc;
+$color__border-abbr: #666;
+
